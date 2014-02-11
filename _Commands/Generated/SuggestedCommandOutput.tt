@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:Value;InputValue;Index;Suggestions") #>
+<# Add_Field(n:="Value", t:="System.String", a:="R") #>
+<# Add_Field(n:="InputValue", t:="System.String()", a:="R") #>
+<# Add_Field(n:="Index", t:="System.Int32", a:="R") #>
+<# Add_Field(n:="Suggestions", t:="System.String()", a:="R") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

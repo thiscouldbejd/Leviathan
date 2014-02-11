@@ -1,0 +1,13 @@
+﻿<# Add_Class(a:="Visualisation", d:="Enum to Hold Information Types") #>
+<# Add_Enum(n:="None", v:=0, d:="Indicating the Information is of No Type (e.g. it's an empty string or just blanks).") #>
+<# Add_Enum(n:="General", v:=1, d:="Indicating the Information is of a General Type.") #>
+<# Add_Enum(n:="Performance", v:=2, d:="Indicating the Information is relating to Performance information.") #>
+<# Add_Enum(n:="Success", v:=3, d:="Indicating the Information represents a Success.") #>
+<# Add_Enum(n:="Information", v:=4, d:="Indicating the Information is Informational.") #>
+<# Add_Enum(n:="Warning", v:=5, d:="Indicating the Information is a Warning.") #>
+<# Add_Enum(n:="Error", v:=6, d:="Indicating the Information is an Error.") #>
+<# Add_Enum(n:="Question", v:=7, d:="Indicating the Information is a Question.") #>
+<# Add_Enum(n:="Log", v:=8, d:="Indicating the Information is a Log.") #>
+<# Add_Enum(n:="Debug", v:=9, d:="Indicating the Information is a Debug.") #>
+<# Add_Enum(n:="Help", v:=10, d:="Indicating the Information is Help.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

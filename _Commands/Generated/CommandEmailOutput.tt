@@ -1,0 +1,21 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="Log", t:="System.IO.DirectoryInfo") #>
+<# Add_Field(n:="Suppress", t:="System.Boolean") #>
+<# Add_Field(n:="Server", t:="System.String") #>
+<# Add_Field(n:="ServerPort", t:="System.Int32", f:="25") #>
+<# Add_Field(n:="ServerSSL", t:="System.Boolean") #>
+<# Add_Field(n:="ServerDomain", t:="System.String") #>
+<# Add_Field(n:="ServerUsername", t:="System.String") #>
+<# Add_Field(n:="ServerPassword", t:="System.String") #>
+<# Add_Field(n:="FromAddress", t:="System.String") #>
+<# Add_Field(n:="FromDisplay", t:="System.String") #>
+<# Add_Field(n:="ReplyToAddress", t:="System.String") #>
+<# Add_Field(n:="ReplyToDisplay", t:="System.String") #>
+<# Add_Field(n:="ToAddresses", t:="System.String()") #>
+<# Add_Field(n:="Subject", t:="System.String") #>
+<# Add_Field(n:="UseHtml", t:="System.Boolean") #>
+<# Add_Field(n:="CharacterWidth", t:="System.Int32", f:="150") #>
+<# Add_Field(n:="Email_Message", t:="Hermes.Email.Message", f:="NEW") #>
+<# Add_Field(n:="HasWritten", t:="System.Boolean") #>
+<# Add_Field(n:="Default_From_Domain", t:="System.String", f:="@mailinator.com") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

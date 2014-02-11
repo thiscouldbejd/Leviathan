@@ -1,0 +1,3 @@
+﻿<# Add_Class(i:="System.Attribute", u:=True, d:="This attribute should be used to decorate a Field or Property that Uniquely indentifies an Object.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.[Field] Or AttributeTargets.[Property]|At_Multiple:False|At_Inherited:True") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

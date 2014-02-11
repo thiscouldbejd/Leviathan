@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Name.") #>
+<# Add_Field(n:="Names", t:="System.String()", d:="The Member's Names") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

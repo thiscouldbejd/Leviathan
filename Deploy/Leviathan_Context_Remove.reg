@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\shell\T4_Transform]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\T4_Transform\command]
+
+[-HKEY_CLASSES_ROOT\VisualStudio.TextTemplating.10.0\shell\T4_Transform]
+
+[-HKEY_CLASSES_ROOT\VisualStudio.TextTemplating.10.0\shell\T4_Transform\command]
+
+[-HKEY_CLASSES_ROOT\VisualStudio.TextTemplating.10.0\shell\T4_Transform_Debug]
+
+[-HKEY_CLASSES_ROOT\VisualStudio.TextTemplating.10.0\shell\T4_Transform_Debug\command]

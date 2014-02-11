@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="Configurable", p:="Pr_Configurable:Directory") #>
+<# Add_Field(n:="Directory", t:="IO.DirectoryInfo") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

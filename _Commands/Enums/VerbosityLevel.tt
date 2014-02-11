@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Commands", d:="Enum for Verbosity Levels") #>
+<# Add_Enum(n:="Silent", d:="No Verbosity (No/Minimal Output).") #>
+<# Add_Enum(n:="Errors", d:="Errors Only Verbosity (Show Errors Output).") #>
+<# Add_Enum(n:="Standard", d:="Standard Verbosity (Normal Level of Output).") #>
+<# Add_Enum(n:="Interactive", d:="Interactive Verbosity (Real-Time Level of Output).") #>
+<# Add_Enum(n:="Verbose", d:="High Verbosity (High Level of Output).") #>
+<# Add_Enum(n:="Debug", d:="Debug Verbosity (Top Level of Output).") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

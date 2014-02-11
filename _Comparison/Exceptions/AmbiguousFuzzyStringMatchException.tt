@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Comparison", i:="Exception", u:=False, d:="Exception which should be thrown when a match request is Ambiguous.") #>
+<# Add_Field(n:="AmbiguousName", t:="System.String", d:="Ambiguous Name") #>
+<# Add_Field(n:="Matches", t:="FuzzyMatch()", d:="Potential Matches") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

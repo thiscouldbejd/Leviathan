@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Leviathan.Testing.TestParsedObjectCollection>
+  <AProperty1>Test1</AProperty1>
+  <ListChildren>
+    <ArrayList>
+      <Leviathan.Testing.TestParsedObject>
+        <AField1>1</AField1>
+        <AField2>Test1</AField2>
+        <AProperty1>2</AProperty1>
+        <AProperty2>Test2</AProperty2>
+      </Leviathan.Testing.TestParsedObject>
+    </ArrayList>
+  </ListChildren>
+</Leviathan.Testing.TestParsedObjectCollection>

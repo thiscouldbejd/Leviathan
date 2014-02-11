@@ -1,0 +1,15 @@
+﻿<# Add_Class(a:="Configuration", i:="System.Xml.Serialization.XmlElementAttribute", p:="MyBase.ElementName = Name", d:="Should be applied to fields/properties/parameters that can be configured from an external source. Use Default Value wherever possible.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.[Field] Or AttributeTargets.[Property] Or AttributeTargets.[Parameter]|At_Multiple:True|At_Inherited:True") #>
+<# Add_Behaviour(n:="Resourced", p:="Pr_Resourced:Description;ArgsDescription") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Prefix}{Name}") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Display/Parsing Name") #>
+<# Add_Field(n:="ResourceContainingType", t:="System.Type", d:="Type (and therefore Assembly) that contains the Resource.") #>
+<# Add_Field(n:="ResourceName", t:="System.String", d:="Name of the Resource") #>
+<# Add_Field(n:="Description", t:="System.String", d:="Brief Description") #>
+<# Add_Field(n:="ArgsDescription", t:="System.String", d:="Brief Description of the Value To Parse") #>
+<# Add_Field(n:="Required", t:="System.Boolean") #>
+<# Add_Field(n:="ValidationRegex", t:="System.String") #>
+<# Add_Field(n:="DefaultValue", t:="System.String") #>
+<# Add_Field(n:="Prefix", t:="System.String", d:="The Prefix for the String Representation (e.g. /)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

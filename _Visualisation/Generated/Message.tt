@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Visualisation", d:="", p:="PostConstruction()") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Title}") #>
+<# Add_Field(n:="Title", t:="System.String", d:="The Title of the Data.") #>
+<# Add_Field(n:="Type", t:="InformationType", f:="InformationType.General", d:="The Type of the Data.") #>
+<# Add_Field(n:="Values", t:="System.String()", d:="The Message Values", f:="NEW") #>
+<# Add_Field(n:="DisplayTitle", t:="System.String", a:="R", d:="The Displayable Title of the Data.") #>
+<# Add_Field(n:="MaxLength", t:="System.Int32", a:="R", d:="The Maximum Length of the Values") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

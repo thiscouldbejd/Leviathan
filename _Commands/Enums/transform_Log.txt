@@ -1,0 +1,26 @@
+-- Transforms --
+
+Directory                                Input File                Output File              
+---------------------------------------- ------------------------- -------------------------
+Z:\Development\Leviathan\_Commands\Enums CommandType.tt            CommandType.vb           
+                                         OutputtedType.tt          OutputtedType.vb         
+                                         ValueType.tt              ValueType.vb             
+                                         VerbosityLevel.tt         VerbosityLevel.vb        
+                                         SqlConnectionOwnership.tt SqlConnectionOwnership.vb
+                                         SuggestedCommandKey.tt    SuggestedCommandKey.vb   
+
+-- Transform Results --
+
+Name                               Total
+---------------------------------- -----
+Template Files Processed           6    
+Transforms Failed                  0    
+Transforms Succeeded               6    
+Files Generated with .vb Extension 6    
+
+-- PERFORMANCE --
+
+Command                                                                            Took             Memory Usage Execution Order
+---------------------------------------------------------------------------------- ---------------- ------------ ---------------
+TemplatingCommands.ProcessCommandTransformAll(inputDirectories As DirectoryInfo[]) 6 secs, 92 msecs 8,248kb      1              
+--  [Z:\Development\Leviathan\_Commands\Enums]                                                                                  

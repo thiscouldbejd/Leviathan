@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Inspection", d:="Enum Representing Type Member Visibility.") #>
+<# Add_Enum(n:="Private", d:="Member has Private Visibility.", v:=1, b:=True) #>
+<# Add_Enum(n:="Protected", d:="Member has Protected Visibility.", v:=2, b:=True) #>
+<# Add_Enum(n:="Friend", d:="Member has Friend Visibility.", v:=4, b:=True) #>
+<# Add_Enum(n:="Public", d:="Member has Public Visibility.", v:=8, b:=True) #>
+<# Add_Enum(n:="ProtectedFriend", d:="Member has Protected Friend Visibility.", v:=2 Or 4, b:=True) #>
+<# Add_Enum(n:="NonPublic", d:="Members has Non-Public Visibility.", v:=1 Or 2 Or 3, b:=True) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

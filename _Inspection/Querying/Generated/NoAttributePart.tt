@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for No Attribute Presence.") #>
+<# Add_Field(n:="AttributeType", t:="System.Type", d:="The Member's Absent Attribute") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

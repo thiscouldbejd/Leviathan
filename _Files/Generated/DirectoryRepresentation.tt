@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Files", d:="Class Representing an Directory.") #>
+<# Add_Field(n:="Name", t:="System.String") #>
+<# Add_Field(n:="Rules", t:="AccessRuleRepresentation()") #>
+<# Add_Field(n:="Children", t:="DirectoryRepresentation()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

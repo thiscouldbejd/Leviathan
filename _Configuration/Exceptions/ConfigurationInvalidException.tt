@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Configuration", i:="Exception", d:="Exception which should be thrown when a required Provider Object is not available") #>
+<# Add_Behaviour(n:="Described") #>
+<# Add_Field(n:="ProviderType", t:="System.Type", d:="Provider Type") #>
+<# Add_Field(n:="ProviderAssembly", t:="System.Reflection.Assembly", d:="Provider Assembly Source") #>
+<# Add_Field(n:="ProviderSpecificName", t:="System.String", d:="Specific Provider Name") #>
+<# Add_Field(n:="ConfigurationAttributeName", t:="System.String", d:="Name of the XML Attribute which is Invalid") #>
+<# Add_Field(n:="ConfigurationAttributeValue", t:="System.String", d:="Value of the XML Attribute which is Invalid") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Commands", c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:control|Cm_Description:@commandControlDescription@") #>
+<#@ include file="..\Definitions\Command.def" #>
+<# Add_Field(n:="ParameterRegex", t:="System.String", f:="(?<=^\!)[A-z0-9_*].*(?=\!$)") #>
+<# Add_Field(n:="IterationSource", t:="System.Object") #>
+<# Add_Field(n:="Cache", t:="Leviathan.Caching.Simple", f:="Leviathan.Caching.Simple.GetInstance(Me.GetType().GetHashCode(), True)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,9 @@
+﻿<# Add_Class(a:="Commands.Aliasing", d:="Command Alias") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Command", t:="System.String") #>
+<# Add_Field(n:="Description", t:="System.String") #>
+<# Add_Field(n:="ExpandTo", t:="Expansion()") #>
+<# Add_Field(n:="Arguments", t:="System.String()") #>
+<# Add_Field(n:="LastArgumentArray", t:="System.Boolean") #>
+<# Add_Field(n:="Hidden", t:="System.Boolean") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

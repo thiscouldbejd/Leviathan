@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="ToFiles", t:="System.IO.FileStream()") #>
+<# Add_Field(n:="CharacterWidth", t:="System.Int32", f:="Int32.MaxValue") #>
+<# Add_Field(n:="Encoder", t:="System.Text.Encoding", f:="System.Text.Encoding.UTF8") #>
+<# Add_Field(n:="HasWritten", t:="System.Boolean") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

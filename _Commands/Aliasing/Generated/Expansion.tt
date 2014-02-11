@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands.Aliasing", d:="Command Expansion") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Command", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

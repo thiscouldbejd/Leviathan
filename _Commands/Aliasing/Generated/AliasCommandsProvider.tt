@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Commands.Aliasing") #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Behaviour(n:="Configurable", p:="Pr_Configurable:Aliases") #>
+<# Add_Field(n:="Aliases", t:="Aliasing.Alias()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

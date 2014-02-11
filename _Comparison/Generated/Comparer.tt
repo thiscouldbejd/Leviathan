@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Comparison", d:="IComparer to Compare Objects Derived from <seealso cref=""Object""/> for Sorting Collections/Lists.") #>
+<# Add_Field(n:="SortDirection", t:="System.ComponentModel.ListSortDirection", d:="Direction of the Sort", f:="System.ComponentModel.ListSortDirection.Ascending") #>
+<# Add_Field(n:="SortProperties", t:="Inspection.MemberAnalyser()", d:="Readable Members upon which to Sort (will use Comparable Decorated Members if not present)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

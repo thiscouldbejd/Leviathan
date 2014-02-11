@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Inspection", d:="This attribute should declare the Type of object that is encapsulated by the collection.") #>
+<# Add_Behaviour(n:="Settable") #>
+<# Add_Field(n:="ReturnType", t:="AnalyserType", d:="Return Type of this Query") #>
+<# Add_Field(n:="DeclaredBelowType", t:="System.Type", d:="Type Below which Return Types should be Declared") #>
+<# Add_Field(n:="NumberOfResults", t:="System.Int32", d:="Number Of Results of this Query") #>
+<# Add_Field(n:="Parts", t:="System.Collections.ArrayList", d:="Parts", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

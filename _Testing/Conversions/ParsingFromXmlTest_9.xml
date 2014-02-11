@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Leviathan.Testing.TestParsedObject>
+
+  <ArrayChildren>
+
+    <Leviathan.Testing.TestParsedObject->
+
+      <!-- Command = 1 -->
+      <!-- Command = 2 -->
+      <!-- Command = 3 -->
+      <Leviathan.Testing.TestParsedObject>
+        <AField1>1</AField1>
+      </Leviathan.Testing.TestParsedObject>
+
+      <!-- Command = 1 -->
+      <!-- Command = 2 -->
+      <!-- Command = 3 -->
+      <Leviathan.Testing.TestParsedObject>
+        <AField1>2</AField1>
+      </Leviathan.Testing.TestParsedObject>
+
+      <!-- Command = 1 -->
+      <!-- Command = 2 -->
+      <!-- Command = 3 -->
+      <Leviathan.Testing.TestParsedObject>
+        <AField1>3</AField1>
+      </Leviathan.Testing.TestParsedObject>
+
+      <!-- Command = 1 -->
+      <!-- Command = 2 -->
+      <!-- Command = 3 -->
+      <Leviathan.Testing.TestParsedObject>
+        <AField1>4</AField1>
+      </Leviathan.Testing.TestParsedObject>
+
+    </Leviathan.Testing.TestParsedObject->
+
+  </ArrayChildren>
+
+</Leviathan.Testing.TestParsedObject>

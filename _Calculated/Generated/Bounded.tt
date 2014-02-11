@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Calculated") #>
+<# Add_Field(n:="All", t:="System.Collections.Generic.List(Of System.Double)", f:="NEW") #>
+<# Add_Field(n:="Minimum", t:="System.Double", f:="System.Double.MaxValue") #>
+<# Add_Field(n:="Maximum", t:="System.Double", f:="System.Double.MinValue") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

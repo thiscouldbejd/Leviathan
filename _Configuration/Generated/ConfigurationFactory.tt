@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Configuration", s:="True", d:="Responsible for Configuring Objects.") #>
+<# Add_Field(n:="Parser", t:="FromString", f:="NEW") #>
+<# Add_Field(n:="Base", t:="System.String", f:="##Me.GetType().Assembly.GetName().Name") #>
+<# Add_Field(n:="Files", t:="FileStreamConvertor", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

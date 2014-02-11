@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Accessibility (e.g. Read/Write, Read-Only etc).") #>
+<# Add_Field(n:="Accessibility", t:="MemberAccessibility", d:="The Member's Accessibility", f:="MemberAccessibility.All") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

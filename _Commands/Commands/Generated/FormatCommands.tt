@@ -1,0 +1,31 @@
+﻿<# Add_Class(a:="Commands", c:=False, d:="Formatter Class For Standard/Grid Object Formatting") #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:format|Cm_Description:@commandFormatterDescription@") #>
+<# Add_Behaviour(n:="CommandFlag", p:="Pr_CommandFlag:FieldsToSortAscending;FieldsToSortDescending;FieldsToOverride;FieldsToAdd;FieldsToRemove;" & _
+"ColumnFields;ColumnFieldsToSortAscending;ColumnFieldsToSortDescending;RowFields;RowFieldsToSortAscending;RowFieldsToSortDescending;" & _
+"ValueFields;ValueFieldType;DecimalPlaces|Fl_Flags:$;$$;=;+;-;column;$column;$$column;row;$row;$$row;value;representation;rounding|" & _
+"Fl_Descriptions:@commandSortedDescriptionAscending@;@commandSortedDescriptionDescending@;@commandFormatterPropertiesDescriptionOverride@;" & _
+"@commandFormatterPropertiesDescriptionAdd@;@commandFormatterPropertiesDescriptionRemove@;@commandFormatterPivotDescriptionColumn@;" & _
+"@commandFormatterPivotDescriptionColumnSortAscending@;@commandFormatterPivotDescriptionColumnSortDescending@;@commandFormatterPivotDescriptionRow@;" & _
+"@commandFormatterPivotDescriptionRowSortAscending@;@commandFormatterPivotDescriptionRowSortDescending@;@commandFormatterPivotDescriptionValue@;" & _
+"@commandFormatterPivotDescriptionValueRepresentation@;@commandFormatterPivotDescriptionRounding@|" & _
+"Fl_Args:@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;" & _
+"@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;" & _
+"@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;" & _
+"@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;" & _
+"@commandFormatterParameterDescriptionRepresentation@;@commandFormatterParameterDescriptionRounding@") #>
+<#@ include file="..\Definitions\Command.def" #>
+<# Add_Field(n:="FieldsToSortAscending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="FieldsToSortDescending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="FieldsToOverride", t:="Leviathan.Commands.FormatterProperty()", f:="NEW") #>
+<# Add_Field(n:="FieldsToAdd", t:="Leviathan.Commands.FormatterProperty()", f:="NEW") #>
+<# Add_Field(n:="FieldsToRemove", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="ColumnFields", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="ColumnFieldsToSortAscending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="ColumnFieldsToSortDescending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="RowFields", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="RowFieldsToSortAscending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="RowFieldsToSortDescending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="ValueFields", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="ValueFieldType", t:="Leviathan.Commands.ValueType", f:="Leviathan.Commands.ValueType.Value") #>
+<# Add_Field(n:="DecimalPlaces", t:="System.Int32", f:="4") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

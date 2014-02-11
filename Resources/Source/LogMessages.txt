@@ -1,0 +1,69 @@
+; Log Messages
+
+; General
+generalException = {0} Has Been Thrown
+generalExceptionWithMethod = {0} Has Been Thrown In Method: {1}
+generalExceptionWithMethodAndTpe = {0} Has Been Thrown In Method: {1}, {2}
+generalExceptionProperties = {0}: {1}
+generalInnerException = >> Inner Exception: {0}
+
+objectInvalid = {0} [{1}] Is An Invalid Object; Invalidity Caused By: {2}
+objectCreated = Created
+objectCreatedWithProvider = Created Using Configuration Provider Details: {0}
+objectDetails = Object Details: {0}
+objectCollectionAdded = {0} [{1}] Added To The {2} Collection
+objectCollectionCleared = {0} Collection Cleared
+objectCollectionRemoved = {0} [{1}] Removed From the {2} Collection
+objectCollectionInserted = {0} [{1}] Inserted Into The {2} Collection At Index {3}
+objectCollectionSet = {0} [1] Updated In The {2} Collection At Index {3}
+
+; Leviathan.Caching
+blendedCacheCreated = Blended Cache Instantiated: Path={0}: Memory Limit={1}: Time Age Base={2}: Max File Age={3}
+
+cacheInterceptorNoCache = Supplied Configuration Means Caching Interceptor Will Not Cache Any Types
+cacheInterceptorNoCacheProvider = Missing Cache Provider Means Caching Interceptor Will Not Cache Any Types
+cacheInterceptorNoCacheTypes = Supplied Configuration Means Caching Interceptor Will Cache These Types: {0}
+cacheInterceptorObjectNotCachable = Object Type: {0} Is Not Excluded From Cache But Is Not Derived From BaseObject Or Implements IIdentifiable, It Cannot Be Cached
+
+; Leviathan.Configuration
+genericInterceptorPopulation = Interceptors Population From Namespace: {0} Interceptors: {1}
+genericInterceptorException = Exception Thrown in Interceptor: {0} Called Method: {1} Details: {2}
+genericInterceptorCall = Calling Interceptor: {0} Called Method: {1}
+
+; Leviathan.Persistance
+persistanceInterceptorReturn = Interceptor: {0} Has Returned Objects When Calling Method: {1}
+persistanceInterceptorMiss = Interceptor Miss For Query, Routing Query To Persistance Provider Instead
+persistanceInterceptorHit = Interceptor Hit For Query, Returning Data From Interceptor
+persistanceQueryTranslatedPropertyRecomposition = Query Has Translated Properties, Re-Composing Them Into Concrete Properties
+persistanceQueryIncompatibleRetrievalIdType = Object Type Requested is: {0} But Identifier Supplid Is Of Type: {1}, Routing Query To Try Unique Properties Retrieval
+persistanceQueryUniquePropertyRetrieval = Attempting Retrieval Using Unique Properties
+persistanceQueryUniquePropertyQuery = Attempting Retrieval For Property: {0}
+persistanceQueryEnableDataValidity = Setting Query Data Validity From: {0} To: {1}
+
+queryTranslatedPropertyRecomposition = Query Has Translated Properties, Re-Composing Them Into Concrete Properties
+queryIncompatibleRetrievalIdType = Object Type Requested is: {0} But Identifier Supplid Is Of Type: {1}, Routing Query To Try Unique Properties Retrieval
+queryUniquePropertyRetrieval = Attempting Retrieval Using Unique Properties
+queryUniquePropertyQuery = Attempting Retrieval For Property: {0}
+queryEnableDataValidity = Setting Query Data Validity From: {0} To: {1}
+queryExecuted = Direct Query Executed: {0}
+
+transactionNotRetrieved = Could Not Retrieve Session/Transaction For Transaction Id: {0}
+transactionRolledBack = Transaction ({0}) Was Rolled Back
+
+factoryConfigurationSettings = Configuration Key/Value Pair Was Passed To NHibernate Configuration: {0} = {1}
+
+queryParserOutputProperties = Output Properties: {0}
+queryParserTranslatedProperties = Translated Property From: {0} To: {1} Using: {2}
+queryParserParameters = Parameters: {0}
+queryParserOrdering = Orderings: {0}
+queryParserJoinings = Joins: {0}
+
+; Leviathan.Directories
+directoryCreatedProfileDirBase = CreatedProfileDirBase
+directoryCreatedHomeDirBase = CreatedHomeDirBase
+directoryAccountUsername = AccountUsername
+directoryAccountPassword = AccountPassword
+directoryAccountPasswordPhonetic = AccountPasswordPhonetic
+directoryCreatedAccount = CreatedAccount
+directoryAddedToGroups = AddedToGroups
+directorySetHomeDirSecurity = SetHomeDirSecurity

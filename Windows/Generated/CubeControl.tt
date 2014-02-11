@@ -1,0 +1,36 @@
+﻿<# Add_Class(i:="System.Windows.Controls.Panel", p:="RenderTransform = Transform") #>
+<# Add_Field(n:="FontFamily", t:="System.Windows.Media.FontFamily") #>
+<# Add_Field(n:="FontStyle", t:="System.Windows.FontStyle") #>
+<# Add_Field(n:="FontWeight", t:="System.Windows.FontWeight") #>
+<# Add_Field(n:="FontStretch", t:="System.Windows.FontStretch") #>
+<# Add_Field(n:="FontSize", t:="System.Double") #>
+<# Add_Field(n:="Foreground", t:="System.Windows.Media.Brush") #>
+<# Add_Field(n:="COLOUR_PERFORMANCE", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.DarkGoldenrod") #>
+<# Add_Field(n:="COLOUR_SUCCESS", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.LawnGreen") #>
+<# Add_Field(n:="COLOUR_INFORMATION", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.Blue") #>
+<# Add_Field(n:="COLOUR_WARNING", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.Yellow") #>
+<# Add_Field(n:="COLOUR_ERROR", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.Red") #>
+<# Add_Field(n:="COLOUR_DEBUG", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.DarkSlateGray") #>
+<# Add_Field(n:="COLOUR_LOG", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.DarkSlateGray") #>
+<# Add_Field(n:="COLOUR_QUESTION", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.White") #>
+<# Add_Field(n:="COLOUR_HELP", t:="System.Windows.Media.Color", f:="System.Windows.Media.Colors.Peru") #>
+<# Add_Field(n:="Values", t:="System.Collections.Generic.List(Of Leviathan.Visualisation.IFixedWidthWriteable)", a:="R", f:="NEW") #>
+<# Add_Field(n:="CanHorizontallyScroll", t:="System.Boolean", i:="System.Windows.Controls.Primitives.IScrollInfo.CanHorizontallyScroll", f:="False") #>
+<# Add_Field(n:="CanVerticallyScroll", t:="System.Boolean", i:="System.Windows.Controls.Primitives.IScrollInfo.CanVerticallyScroll", f:="True") #>
+<# Add_Field(n:="ExtentHeight", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.ExtentHeight") #>
+<# Add_Field(n:="ExtentWidth", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth") #>
+<# Add_Field(n:="HorizontalOffset", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset") #>
+<# Add_Field(n:="ScrollOwner", t:="System.Windows.Controls.ScrollViewer", i:="System.Windows.Controls.Primitives.IScrollInfo.ScrollOwner") #>
+<# Add_Field(n:="VerticalOffset", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.VerticalOffset") #>
+<# Add_Field(n:="ViewportHeight", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.ViewportHeight") #>
+<# Add_Field(n:="ViewportWidth", t:="System.Double", a:="R", i:="System.Windows.Controls.Primitives.IScrollInfo.ViewportWidth") #>
+<# Add_Field(n:="CharacterWidth", t:="System.Int32") #>
+<# Add_Field(n:="SingleCharacterWidth", t:="System.Double") #>
+<# Add_Field(n:="IdealWidthDelta", t:="System.Double", d:="Ideal Changed Width (positive is grow, negative is shrink)") #>
+<# Add_Field(n:="Text", t:="System.Windows.Media.FormattedText") #>
+<# Add_Field(n:="Text_Value", t:="System.Text.StringBuilder") #>
+<# Add_Field(n:="Transform", t:="System.Windows.Media.TranslateTransform", f:="NEW") #>
+<# Add_Field(n:="Colours", t:="System.Collections.Generic.Dictionary(Of Integer, Brush)") #>
+<# Add_Field(n:="Last_Type", t:="Leviathan.Visualisation.InformationType") #>
+<# Add_Field(n:="Last_Count", t:="System.Int32") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

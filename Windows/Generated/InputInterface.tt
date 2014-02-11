@@ -1,0 +1,23 @@
+﻿<# Add_Class(i:="System.Windows.Window", p:="InitializeComponent()", g:=False) #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:ExecutingThreads") #>
+<# Add_Field(n:="Prompt", t:="System.String") #>
+<# Add_Field(n:="Handler", t:="Leviathan.Commands.SuggestedCommandHandler", f:="NEW", e:=True) #>
+<# Add_Field(n:="Cache", t:="Leviathan.Caching.Simple", f:="Leviathan.Caching.Simple.GetInstance(GetType(Leviathan.Commands.ControlCommands).GetHashCode(), True)", e:=True) #>
+<# Add_Field(n:="InputChangedThread", t:="System.Threading.Thread") #>
+<# Add_Field(n:="ExecutingThreads", t:="List(Of System.Threading.Thread)", f:="NEW") #>
+<# Add_Field(n:="ExecutingWindows", t:="List(Of OutputInterface)", f:="NEW") #>
+<# Add_Field(n:="COLOUR_ACTIVE_TEXT", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 245, 245, 245)") #>
+<# Add_Field(n:="COLOUR_NONACTIVE_TEXT", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 150, 150, 150)") #>
+<# Add_Field(n:="RecentCommands", t:="System.Collections.Generic.List(Of String)", f:="New List(Of String)(New String() {Nothing})") #>
+<# Add_Field(n:="RecentCommandPosition", t:="System.Int32") #>
+<# Add_Field(n:="CacheList", t:="System.Collections.Generic.List(Of String)", f:="NEW") #>
+<# Add_Field(n:="CachePosition", t:="System.Int32") #>
+<# Add_Field(n:="ExecutedThreadsCount", t:="System.Int32") #>
+<# Add_Field(n:="SingleCharacterWidth", t:="System.Double") #>
+<# Add_Field(n:="SingleLineHeight", t:="System.Double") #>
+<# Add_Field(n:="InputBoxCharacterWidth", t:="System.Int32") #>
+<# Add_Field(n:="Window_Locked", t:="System.Boolean") #>
+<# Add_Field(n:="COLOUR_UNLOCKED_BORDER", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 26, 26, 26)") #>
+<# Add_Field(n:="COLOUR_LOCKED_BORDER", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 52, 26, 26)") #>
+<# Add_Field(n:="Opacity_Locked", t:="System.Boolean") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Parameter Name") #>
+<# Add_Field(n:="Description", t:="System.String", d:="Parameter Description") #>
+<# Add_Field(n:="Type", t:="System.Type", d:="Parameter Type") #>
+<# Add_Field(n:="Position", t:="System.Int32", d:="Parameter Position") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

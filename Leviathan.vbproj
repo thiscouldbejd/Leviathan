@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FFEF1E5-A5FE-4F02-A506-B7D73B524D91}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Leviathan</RootNamespace>
+    <AssemblyName>Leviathan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>WindowsForms</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>true</SignAssembly>
+    <ApplicationIcon>Windows\Icons\Main.ico</ApplicationIcon>
+    <RemoveIntegerChecks>False</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <StartupObject>Leviathan.AssemblyEntry</StartupObject>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <!-- Note: If MSBuild.Community.Tasks is not installed on Build Machine -->
+    <!-- Set the MSBuildCommunityTasksPath Property in MSBuild.Community.Tasks.Targets (Packages) to '.' e.g. -->
+    <!-- <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath> -->
+    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.65\tools</MSBuildTasksPath>
+    <NUnitToolPath>Packages\NUnit.Runners.2.6.2\tools</NUnitToolPath>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Leviathan.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <Optimize>false</Optimize>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Leviathan.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <DebugType>None</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>XLI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>XLI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <StartAction>Project</StartAction>
+    <DefineConstants>DEBUG=1,TRACE=1,TESTING=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hermes">
+      <HintPath>Packages\Hermes.1.0.5145.27934\lib\net40\Hermes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Reference Include="nunit.framework">
+      <HintPath>Packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_Calculated\Generated\Bounded.vb">
+      <DependentUpon>Bounded.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Calculated\Partials\Bounded.vb" />
+    <Compile Include="_Commands\Generated\CommandConsoleOutput.vb">
+      <DependentUpon>CommandConsoleOutput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandPerformanceTimer.vb">
+      <DependentUpon>CommandPerformanceTimer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\FormatterProperty.vb">
+      <DependentUpon>FormatterProperty.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Partials\CommandConsoleOutput.vb" />
+    <Compile Include="_Commands\Partials\CommandPerformanceTimer.vb" />
+    <Compile Include="_Commands\Partials\CommandProgess.vb" />
+    <Compile Include="_Commands\Partials\FormatterProperty.vb" />
+    <Compile Include="_Configuration\Convertors\StreamReaderConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\StreamWriterConvertor.vb" />
+    <Compile Include="_Visualisation\Enums\InformationType.vb">
+      <DependentUpon>InformationType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Cube.vb">
+      <DependentUpon>Cube.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Graph.vb">
+      <DependentUpon>Graph.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Message.vb">
+      <DependentUpon>Message.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Cell.vb">
+      <DependentUpon>Cell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Row.vb">
+      <DependentUpon>Row.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Generated\Slice.vb">
+      <DependentUpon>Slice.tt</DependentUpon>
+    </Compile>
+    <Page Include="Windows\Design\InputInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Themes\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Design\OutputInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="_Calculated\Generated\Bounded.tt" />
+    <None Include="_Commands\Generated\CommandConsoleOutput.tt" />
+    <None Include="_Commands\Generated\CommandPerformanceTimer.tt" />
+    <None Include="_Commands\Generated\FormatterProperty.tt" />
+    <None Include="_Visualisation\Enums\InformationType.tt" />
+    <None Include="_Visualisation\Generated\Cube.tt" />
+    <None Include="_Visualisation\Generated\Message.tt" />
+    <None Include="_Visualisation\Generated\Cell.tt" />
+    <None Include="_Visualisation\Generated\Row.tt" />
+    <None Include="_Visualisation\Generated\Slice.tt" />
+    <None Include="General\Attributes\Generated\DescriptionAttribute.tt" />
+    <None Include="General\Attributes\Generated\NameAttribute.tt" />
+    <None Include="General\Attributes\Generated\SupportsAttribute.tt" />
+    <None Include="General\Attributes\Generated\UniqueAttribute.tt" />
+    <None Include="Resources\Source\AttributeExpansions.en-GB.txt" />
+    <None Include="Resources\Source\CommandDetails.en-GB.txt" />
+    <None Include="Resources\Source\ExceptionMessages.en-GB.txt" />
+    <None Include="Resources\Source\LogMessages.en-GB.txt" />
+    <None Include="Resources\Source\OutputMessages.en-GB.txt" />
+    <None Include="Resources\Source\StringFormats.en-GB.txt" />
+    <EmbeddedResource Include="Resources\Compiled\CommandDetails.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\CommandDetails.resources" />
+    <EmbeddedResource Include="Windows\Icons\Main.ico" />
+    <Page Include="Windows\Themes\ResizeGrip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Windows\Generated\CubeControl.tt" />
+    <None Include="Windows\Generated\InputInterface.tt" />
+    <None Include="Windows\Generated\OutputInterface.tt" />
+    <None Include="_Caching\Generated\Simple.tt" />
+    <None Include="_Calculated\Generated\Average.tt" />
+    <None Include="_Calculated\Generated\Percentage.tt" />
+    <None Include="_Collections\Attributes\ElementTypeAttribute.tt" />
+    <None Include="_Collections\Generated\DataCollection.tt" />
+    <None Include="_Commands\Aliasing\Generated\Alias.tt" />
+    <None Include="_Commands\Aliasing\Generated\AliasCommandInterrogatedMethod.tt" />
+    <None Include="_Commands\Aliasing\Generated\AliasCommandsProvider.tt" />
+    <None Include="_Commands\Aliasing\Generated\Expansion.tt" />
+    <None Include="_Commands\Attributes\Generated\CommandAttribute.tt" />
+    <None Include="_Commands\Attributes\Generated\ParsingInParameterAttribute.tt" />
+    <None Include="_Commands\Attributes\Generated\ParsingSuccessParameterAttribute.tt" />
+    <None Include="_Commands\Attributes\Generated\ParsingTypeParameterAttribute.tt" />
+    <None Include="_Commands\Commands\Definitions\Command.def" />
+    <None Include="_Commands\Commands\Generated\ControlCommands.tt" />
+    <None Include="_Commands\Commands\Generated\CryptographyCommands.tt" />
+    <None Include="_Commands\Commands\Generated\DataCommands.tt" />
+    <None Include="_Commands\Commands\Generated\FilesCommands.tt" />
+    <None Include="_Commands\Commands\Generated\ObjectsCommands.tt" />
+    <None Include="_Commands\Commands\Generated\FormatCommands.tt" />
+    <None Include="_Commands\Commands\Generated\StringCommands.tt" />
+    <None Include="_Commands\Enums\CommandType.tt" />
+    <None Include="_Commands\Enums\OutputtedType.tt" />
+    <None Include="_Commands\Enums\SqlConnectionOwnership.tt" />
+    <None Include="_Commands\Enums\SuggestedCommandKey.tt" />
+    <None Include="_Commands\Enums\ValueType.tt" />
+    <None Include="_Commands\Enums\VerbosityLevel.tt" />
+    <None Include="_Commands\Generated\CommandArgumentsParser.tt" />
+    <None Include="_Commands\Generated\CommandEmailOutput.tt" />
+    <None Include="_Commands\Generated\CommandExecution.tt" />
+    <None Include="_Commands\Generated\CommandFileOutput.tt" />
+    <None Include="_Commands\Generated\CommandInterrogated.tt" />
+    <None Include="_Commands\Generated\CommandInterrogatedClass.tt" />
+    <None Include="_Commands\Generated\CommandInterrogatedFlag.tt" />
+    <None Include="_Commands\Generated\CommandInterrogatedMethod.tt" />
+    <None Include="_Commands\Generated\CommandInterrogatedParameter.tt" />
+    <None Include="_Commands\Generated\CommandPerformance.tt" />
+    <None Include="_Commands\Generated\CommandPerformanceSnapshot.tt" />
+    <None Include="_Commands\Generated\FileSystemCommandsProvider.tt" />
+    <None Include="_Commands\Generated\StandardCommandMatchingProvider.tt" />
+    <None Include="_Commands\Generated\HighlightedCondition.tt" />
+    <None Include="_Commands\Generated\SuggestedCommandHandler.tt" />
+    <None Include="_Commands\Generated\SuggestedCommandInput.tt" />
+    <None Include="_Commands\Generated\SuggestedCommandOutput.tt" />
+    <None Include="_Commands\Generated\SuggestedCommandState.tt" />
+    <None Include="_Comparison\Attributes\ComparableAttribute.tt" />
+    <None Include="_Comparison\Enums\RangeComparisonResult.tt" />
+    <None Include="_Comparison\Exceptions\AmbiguousFuzzyStringMatchException.tt" />
+    <None Include="_Comparison\Generated\Comparer.tt" />
+    <None Include="_Comparison\Generated\FuzzyMatch.tt" />
+    <None Include="_Configuration\Attributes\Generated\ConfigurableAttribute.tt" />
+    <None Include="_Configuration\Exceptions\ConfigurationInvalidException.tt" />
+    <None Include="_Configuration\Exceptions\ConfigurationMissingException.tt" />
+    <None Include="_Configuration\Exceptions\ParsingException.tt" />
+    <None Include="_Configuration\Generated\ConfigurationFactory.tt" />
+    <None Include="_Configuration\Generated\FromString.tt" />
+    <None Include="_Configuration\Generated\XmlSerialiser.tt" />
+    <None Include="_Files\Enums\ComplexPropagationFlags.tt" />
+    <None Include="_Files\Generated\AccessRuleRepresentation.tt" />
+    <None Include="_Files\Generated\DirectoryRepresentation.tt" />
+    <None Include="_Inspection\Analysers\Generated\AssemblyAnalyser.tt" />
+    <None Include="_Inspection\Analysers\Generated\AttributeAnalyser.tt" />
+    <None Include="_Inspection\Analysers\Generated\FolderAnalyser.tt" />
+    <None Include="_Inspection\Analysers\Generated\MemberAnalyser.tt" />
+    <None Include="_Inspection\Analysers\Generated\TypeAnalyser.tt" />
+    <None Include="_Inspection\Enums\AnalyserType.tt" />
+    <None Include="_Inspection\Enums\CollectionAction.tt" />
+    <None Include="_Inspection\Enums\MemberAccessibility.tt" />
+    <None Include="_Inspection\Enums\MemberLocation.tt" />
+    <None Include="_Inspection\Enums\MemberVisibility.tt" />
+    <None Include="_Inspection\Exceptions\MemberNotFoundException.tt" />
+    <None Include="_Inspection\Querying\Behaviours\QueryPartBehaviours.def" />
+    <None Include="_Inspection\Querying\Generated\AccessibilityPart.tt" />
+    <None Include="_Inspection\Querying\Generated\AnalyserQuery.tt" />
+    <None Include="_Inspection\Querying\Generated\ArgumentPart.tt" />
+    <None Include="_Inspection\Querying\Generated\AttributePart.tt" />
+    <None Include="_Inspection\Querying\Generated\LocationPart.tt" />
+    <None Include="_Inspection\Querying\Generated\NamePart.tt" />
+    <None Include="_Inspection\Querying\Generated\NoAttributePart.tt" />
+    <None Include="_Inspection\Querying\Generated\NoValuedAttributePart.tt" />
+    <None Include="_Inspection\Querying\Generated\TypeImplementsPart.tt" />
+    <None Include="_Inspection\Querying\Generated\TypePart.tt" />
+    <None Include="_Inspection\Querying\Generated\ValuedAttributePart.tt" />
+    <None Include="_Inspection\Querying\Generated\VariablePart.tt" />
+    <None Include="_Inspection\Querying\Generated\VisibilityPart.tt" />
+    <Compile Include="Assembly\AssemblyConfig.vb">
+      <DependentUpon>AssemblyConfig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Visualisation\Interfaces\IFixedWidthWriteable.vb" />
+    <Compile Include="_Visualisation\Partials\Cube.vb" />
+    <Compile Include="_Visualisation\Partials\Graph.vb" />
+    <Compile Include="_Visualisation\Partials\Message.vb" />
+    <Compile Include="_Visualisation\Partials\Cell.vb" />
+    <Compile Include="_Visualisation\Partials\Row.vb" />
+    <Compile Include="_Visualisation\Partials\Slice.vb" />
+    <Compile Include="General\Attributes\Generated\DescriptionAttribute.vb">
+      <DependentUpon>DescriptionAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Attributes\Generated\NameAttribute.vb">
+      <DependentUpon>NameAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Assembly\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assembly\AssemblyEntry.vb" />
+    <Compile Include="General\Attributes\Generated\SupportsAttribute.vb">
+      <DependentUpon>SupportsAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General\Attributes\Generated\UniqueAttribute.vb">
+      <DependentUpon>UniqueAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resources.vb" />
+    <Compile Include="Windows\Generated\CubeControl.vb">
+      <DependentUpon>CubeControl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Generated\InputInterface.vb">
+      <DependentUpon>InputInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Generated\OutputInterface.vb">
+      <DependentUpon>OutputInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Partials\CubeControl.vb" />
+    <Compile Include="Windows\Partials\InputInterface.vb">
+    </Compile>
+    <Compile Include="Windows\Partials\OutputInterface.vb">
+    </Compile>
+    <Compile Include="_Calculated\Generated\Average.vb">
+      <DependentUpon>Average.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Calculated\Generated\Percentage.vb">
+      <DependentUpon>Percentage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Calculated\Partials\Average.vb" />
+    <Compile Include="_Calculated\Partials\Percentage.vb" />
+    <Compile Include="_Collections\Generated\DataCollection.vb">
+      <DependentUpon>DataCollection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Collections\Partials\DataCollection.vb" />
+    <Compile Include="_Commands\Commands\Generated\DataCommands.vb">
+      <DependentUpon>DataCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\StringCommands.vb">
+      <DependentUpon>StringCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Partials\DataCommands.vb" />
+    <Compile Include="_Commands\Commands\Partials\StringCommands.vb" />
+    <Compile Include="_Commands\Enums\SqlConnectionOwnership.vb">
+      <DependentUpon>SqlConnectionOwnership.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Enums\ValueType.vb">
+      <DependentUpon>ValueType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandArgumentsParser.vb">
+      <DependentUpon>CommandArgumentsParser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandEmailOutput.vb">
+      <DependentUpon>CommandEmailOutput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandExecution.vb">
+      <DependentUpon>CommandExecution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandFileOutput.vb">
+      <DependentUpon>CommandFileOutput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandInterrogated.vb">
+      <DependentUpon>CommandInterrogated.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandInterrogatedClass.vb">
+      <DependentUpon>CommandInterrogatedClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandInterrogatedFlag.vb">
+      <DependentUpon>CommandInterrogatedFlag.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandInterrogatedMethod.vb">
+      <DependentUpon>CommandInterrogatedMethod.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandInterrogatedParameter.vb">
+      <DependentUpon>CommandInterrogatedParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandPerformance.vb">
+      <DependentUpon>CommandPerformance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\CommandPerformanceSnapshot.vb">
+      <DependentUpon>CommandPerformanceSnapshot.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\FileSystemCommandsProvider.vb">
+      <DependentUpon>FileSystemCommandsProvider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\HighlightedCondition.vb">
+      <DependentUpon>HighlightedCondition.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\StandardCommandMatchingProvider.vb">
+      <DependentUpon>StandardCommandMatchingProvider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\SuggestedCommandHandler.vb">
+      <DependentUpon>SuggestedCommandHandler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\SuggestedCommandInput.vb">
+      <DependentUpon>SuggestedCommandInput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\SuggestedCommandOutput.vb">
+      <DependentUpon>SuggestedCommandOutput.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Generated\SuggestedCommandState.vb">
+      <DependentUpon>SuggestedCommandState.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Interfaces\ICommandsExecution.vb" />
+    <Compile Include="_Commands\Interfaces\ICommandsInteractive.vb" />
+    <Compile Include="_Commands\Interfaces\ICommandsOutput.vb" />
+    <Compile Include="_Commands\Interfaces\ICommandsOutputWriter.vb" />
+    <Compile Include="_Commands\Partials\CommandArgumentsParser.vb" />
+    <Compile Include="_Commands\Partials\CommandEmailOutput.vb">
+    </Compile>
+    <Compile Include="_Commands\Partials\CommandExecution.vb" />
+    <Compile Include="_Commands\Partials\CommandFileOutput.vb" />
+    <Compile Include="_Commands\Partials\FileSystemCommandsProvider.vb" />
+    <Compile Include="_Commands\Partials\StandardCommandMatchingProvider.vb" />
+    <Compile Include="_Configuration\Attributes\Generated\ConfigurableAttribute.vb">
+      <DependentUpon>ConfigurableAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Exceptions\ParsingException.vb">
+      <DependentUpon>ParsingException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Generated\ConfigurationFactory.vb">
+      <DependentUpon>ConfigurationFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Generated\FromString.vb">
+      <DependentUpon>FromString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Partials\ConfigurationFactory.vb" />
+    <Compile Include="_Configuration\Partials\FromString.vb" />
+    <Compile Include="_Testing\Analysis\HashcodeTests.vb" />
+    <Compile Include="_Testing\Analysis\MemberAnalyserTests.vb" />
+    <Compile Include="_Testing\Analysis\TypeAnalyserTests.vb" />
+    <Compile Include="_Testing\ArgumentsParserTest.vb" />
+    <Compile Include="_Testing\Caching\SimpleCacheTests.vb" />
+    <Compile Include="_Testing\Comparison\ObjectComparerTests.vb" />
+    <Compile Include="_Testing\Conversions\ParsingFromStringTest.vb" />
+    <Compile Include="_Testing\Conversions\ParsingFromXmlTest.vb" />
+    <Compile Include="_Testing\Conversions\ParsingToXmlTest.vb" />
+    <Compile Include="_Testing\Equalities\EqualitiesTests.vb" />
+    <Compile Include="_Testing\FormatterPropertyTest.vb" />
+    <Compile Include="_Testing\Manipulation\ArrayManipulatorTests.vb" />
+    <Compile Include="_Testing\Manipulation\ListManipulatorTests.vb" />
+    <Compile Include="_Testing\Manipulation\ObjectManipulatorTests.vb" />
+    <Compile Include="_Testing\Mocks\Attributes\TestAttribute_1.vb" />
+    <Compile Include="_Testing\Mocks\Attributes\TestAttribute_2.vb" />
+    <Compile Include="_Testing\Mocks\Interfaces\TestAnalysedInterface.vb" />
+    <Compile Include="_Testing\Mocks\Lists\TestAnalysedObjectListBase.vb" />
+    <Compile Include="_Testing\Mocks\Lists\TestAnalysedObjectList_1.vb" />
+    <Compile Include="_Testing\Mocks\Lists\TestAnalysedObjectList_2.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObjectMethod.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_1.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_2.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_3.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_4.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_5.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestAnalysedObject_6.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestFormattableObject_1.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestFormattableObject_2.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestFormattableObject_3.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestManipulatedObject_1.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestManipulatedObject_2.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestManipulatedObject_3.vb" />
+    <Compile Include="_Testing\Mocks\Objects\TestManipulatedObject_4.vb" />
+    <Compile Include="_Testing\Querying\AnalyserQueryTests.vb" />
+    <Compile Include="_Testing\StandardFormatterTest.vb" />
+    <Compile Include="_Testing\SuggestedCommandOutputTest.vb" />
+    <Compile Include="_Testing\Text\CharTests.vb" />
+    <Compile Include="_Testing\Text\StringTests.vb" />
+    <Compile Include="_Caching\Generated\Simple.vb">
+      <DependentUpon>Simple.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Caching\Partials\Simple.vb" />
+    <Compile Include="_Collections\Attributes\ElementTypeAttribute.vb">
+      <DependentUpon>ElementTypeAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Collections\Partials\GeneralCollection.vb" />
+    <Compile Include="_Commands\Aliasing\Generated\Alias.vb">
+      <DependentUpon>Alias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Aliasing\Generated\AliasCommandInterrogatedMethod.vb">
+      <DependentUpon>AliasCommandInterrogatedMethod.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Aliasing\Generated\AliasCommandsProvider.vb">
+      <DependentUpon>AliasCommandsProvider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Aliasing\Generated\Expansion.vb">
+      <DependentUpon>Expansion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Aliasing\Partials\Alias.vb" />
+    <Compile Include="_Commands\Aliasing\Partials\AliasCommandInterrogatedMethod.vb" />
+    <Compile Include="_Commands\Aliasing\Partials\AliasCommandsProvider.vb" />
+    <Compile Include="_Commands\Attributes\Generated\CommandAttribute.vb">
+      <DependentUpon>CommandAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Attributes\Generated\ParsingInParameterAttribute.vb">
+      <DependentUpon>ParsingInParameterAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Attributes\Generated\ParsingSuccessParameterAttribute.vb">
+      <DependentUpon>ParsingSuccessParameterAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Attributes\Generated\ParsingTypeParameterAttribute.vb">
+      <DependentUpon>ParsingTypeParameterAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\ControlCommands.vb">
+      <DependentUpon>ControlCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\CryptographyCommands.vb">
+      <DependentUpon>CryptographyCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\FilesCommands.vb">
+      <DependentUpon>FilesCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\ObjectsCommands.vb">
+      <DependentUpon>ObjectsCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Generated\FormatCommands.vb">
+      <DependentUpon>FormatCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Commands\Partials\ControlCommands.vb" />
+    <Compile Include="_Commands\Commands\Partials\CryptographyCommands.vb" />
+    <Compile Include="_Commands\Commands\Partials\FilesCommands.vb" />
+    <Compile Include="_Commands\Commands\Partials\ObjectsCommands.vb" />
+    <Compile Include="_Commands\Commands\Partials\FormatCommands.vb" />
+    <Compile Include="_Configuration\Convertors\ColourConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\DateTimeConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\DirectoryInfoConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\EnumConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\FileInfoConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\FileStreamConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\FontConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\GuidConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\IDbConnectionConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\IntegerConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\IPAddressConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\IPHostEntryConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\LongConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\MacAddressConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\NTAccountConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\StreamConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\TimeSpanConvertor.vb" />
+    <Compile Include="_Configuration\Convertors\TypeConvertor.vb" />
+    <Compile Include="_Commands\Enums\CommandType.vb">
+      <DependentUpon>CommandType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Enums\OutputtedType.vb">
+      <DependentUpon>OutputtedType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Enums\SuggestedCommandKey.vb">
+      <DependentUpon>SuggestedCommandKey.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Enums\VerbosityLevel.vb">
+      <DependentUpon>VerbosityLevel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Commands\Interfaces\ICommandsMatcher.vb" />
+    <Compile Include="_Commands\Interfaces\ICommandsProvider.vb" />
+    <Compile Include="_Commands\Partials\CommandInterrogated.vb" />
+    <Compile Include="_Commands\Partials\CommandInterrogatedClass.vb" />
+    <Compile Include="_Commands\Partials\CommandInterrogatedFlag.vb" />
+    <Compile Include="_Commands\Partials\CommandInterrogatedMethod.vb" />
+    <Compile Include="_Commands\Partials\CommandPerformance.vb" />
+    <Compile Include="_Commands\Partials\HighlightedCondition.vb" />
+    <Compile Include="_Commands\Partials\SuggestedCommandHandler.vb" />
+    <Compile Include="_Commands\Partials\SuggestedCommandInput.vb" />
+    <Compile Include="_Commands\Partials\SuggestedCommandOutput.vb" />
+    <Compile Include="_Comparison\Attributes\ComparableAttribute.vb">
+      <DependentUpon>ComparableAttribute.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Comparison\Enums\RangeComparisonResult.vb">
+      <DependentUpon>RangeComparisonResult.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Comparison\Exceptions\AmbiguousFuzzyStringMatchException.vb">
+      <DependentUpon>AmbiguousFuzzyStringMatchException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Comparison\Generated\Comparer.vb">
+      <DependentUpon>Comparer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Comparison\Generated\FuzzyMatch.vb">
+      <DependentUpon>FuzzyMatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Comparison\Partials\Comparer.vb" />
+    <Compile Include="_Configuration\Exceptions\ConfigurationInvalidException.vb">
+      <DependentUpon>ConfigurationInvalidException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Exceptions\ConfigurationMissingException.vb">
+      <DependentUpon>ConfigurationMissingException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Generated\XmlSerialiser.vb">
+      <DependentUpon>XmlSerialiser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Configuration\Partials\XmlSerialiser.vb" />
+    <Compile Include="_Files\Enums\ComplexPropagationFlags.vb">
+      <DependentUpon>ComplexPropagationFlags.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Files\Generated\AccessRuleRepresentation.vb">
+      <DependentUpon>AccessRuleRepresentation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Files\Generated\DirectoryRepresentation.vb">
+      <DependentUpon>DirectoryRepresentation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Files\Partials\AccessRuleRepresentation.vb" />
+    <Compile Include="_Files\Partials\DirectoryRepresentation.vb" />
+    <Compile Include="_Inspection\Analysers\Generated\AssemblyAnalyser.vb">
+      <DependentUpon>AssemblyAnalyser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Analysers\Generated\AttributeAnalyser.vb">
+      <DependentUpon>AttributeAnalyser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Analysers\Generated\FolderAnalyser.vb">
+      <DependentUpon>FolderAnalyser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Analysers\Generated\MemberAnalyser.vb">
+      <DependentUpon>MemberAnalyser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Analysers\Generated\TypeAnalyser.vb">
+      <DependentUpon>TypeAnalyser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Analysers\Partials\AssemblyAnalyser.vb" />
+    <Compile Include="_Inspection\Analysers\Partials\FolderAnalyser.vb" />
+    <Compile Include="_Inspection\Analysers\Partials\MemberAnalyser.vb" />
+    <Compile Include="_Inspection\Analysers\Partials\TypeAnalyser.vb" />
+    <Compile Include="_Inspection\Enums\AnalyserType.vb">
+      <DependentUpon>AnalyserType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Enums\CollectionAction.vb">
+      <DependentUpon>CollectionAction.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Enums\MemberAccessibility.vb">
+      <DependentUpon>MemberAccessibility.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Enums\MemberLocation.vb">
+      <DependentUpon>MemberLocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Enums\MemberVisibility.vb">
+      <DependentUpon>MemberVisibility.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Exceptions\MemberNotFoundException.vb">
+      <DependentUpon>MemberNotFoundException.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Interfaces\IPostQueryPart.vb" />
+    <Compile Include="_Inspection\Interfaces\IPreQueryPart.vb" />
+    <Compile Include="_Inspection\Querying\Generated\AccessibilityPart.vb">
+      <DependentUpon>AccessibilityPart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\AnalyserQuery.vb">
+      <DependentUpon>AnalyserQuery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\ArgumentPart.vb">
+      <DependentUpon>ArgumentPart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\AttributePart.vb">
+      <DependentUpon>AttributePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\LocationPart.vb">
+      <DependentUpon>LocationPart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\NamePart.vb">
+      <DependentUpon>NamePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\NoAttributePart.vb">
+      <DependentUpon>NoAttributePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\NoValuedAttributePart.vb">
+      <DependentUpon>NoValuedAttributePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\TypeImplementsPart.vb">
+      <DependentUpon>TypeImplementsPart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\TypePart.vb">
+      <DependentUpon>TypePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\ValuedAttributePart.vb">
+      <DependentUpon>ValuedAttributePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\VariablePart.vb">
+      <DependentUpon>VariablePart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Generated\VisibilityPart.vb">
+      <DependentUpon>VisibilityPart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="_Inspection\Querying\Partials\AccessibilityPart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\AnalyserQuery.vb" />
+    <Compile Include="_Inspection\Querying\Partials\ArgumentPart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\AttributePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\LocationPart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\NamePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\NoAttributePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\NoValuedAttributePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\TypeImplementsPart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\TypePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\ValuedAttributePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\VariablePart.vb" />
+    <Compile Include="_Inspection\Querying\Partials\VisibilityPart.vb" />
+    <EmbeddedResource Include="Resources\Compiled\AttributeExpansions.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\AttributeExpansions.resources" />
+    <EmbeddedResource Include="Resources\Compiled\ExceptionMessages.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\ExceptionMessages.resources" />
+    <EmbeddedResource Include="Resources\Compiled\LogMessages.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\LogMessages.resources" />
+    <EmbeddedResource Include="Resources\Compiled\OutputMessages.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\OutputMessages.resources" />
+    <EmbeddedResource Include="Resources\Compiled\StringFormats.en-GB.resources" />
+    <EmbeddedResource Include="Resources\Compiled\StringFormats.resources" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_1.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_10.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_11.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_12.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_13.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_2.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_3.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_4.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_5.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_6.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_7.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_8.xml" />
+    <Content Include="_Testing\Conversions\ParsingFromXmlTest_9.xml" />
+    <Content Include="_Testing\Conversions\ParsingToXmlTest_6.xml" />
+    <Content Include="_Testing\Conversions\ParsingToXmlTest_7.xml" />
+    <Content Include="_Testing\Conversions\ParsingToXmlTest_8.xml" />
+    <Content Include="_Files\Examples\Template-Security-ACL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Leviathan.Commands" />
+    <Import Include="Leviathan.Configuration" />
+    <Import Include="Leviathan.Inspection" />
+    <Import Include="Leviathan.Inspection.TypeAnalyser" />
+    <Import Include="Leviathan.Resources" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Reflection" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildTasksPath)\MSBuild.Community.Tasks.Targets" />
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <NUnit WorkingDirectory="$(MSBuildProjectDirectory)" Assemblies="$(TargetDir)$(TargetFileName)" ContinueOnError="false" OutputXmlFile="$(TargetDir)$(TargetName)-results.xml" ToolPath="$(NUnitToolPath)" DisableShadowCopy="true" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)\Generate-Resources.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent>
+    <PostBuildEvent>IF NOT EXIST "$(TargetDir)Commands\" (
+            mkdir $(TargetDir)Commands
+        )
+        IF NOT EXIST "$(TargetDir)Commands\" (
+            mkdir $(TargetDir)Configuration
+        )
+        del $(TargetDir)Commands\*.command.xml
+        del $(TargetDir)Configuration\*.config.xml
+        IF EXIST "$(SolutionDir)..\Shared-Commands\" (
+            xcopy $(SolutionDir)..\Shared-Commands\*.command.xml $(TargetDir)Commands\
+        )
+        IF EXIST "$(ProjectDir)Configuration\" (
+            xcopy $(ProjectDir)Configuration\*.config.xml $(TargetDir)Configuration\
+        )
+        IF EXIST "$(SolutionDir)..\Shared-Configuration\" (
+            xcopy $(SolutionDir)..\Shared-Configuration\*.config.xml $(TargetDir)Configuration\
+        )</PostBuildEvent>
+  </PropertyGroup>
+</Project>

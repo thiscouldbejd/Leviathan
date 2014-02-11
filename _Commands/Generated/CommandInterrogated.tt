@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="Command", t:="CommandInterrogatedClass", d:="The Command Class") #>
+<# Add_Field(n:="CommandObject", t:="System.Object", d:="The Command Class Object") #>
+<# Add_Field(n:="MethodIndexes", t:="System.Int32()", d:="The Command Method Indexes") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

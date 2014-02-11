@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Analysis Class for a Type.", c:=False, s:=True, p:="PostConstructorCall()") #>
+<# Add_Field(n:="Assembly", t:="System.Reflection.Assembly", d:="Analysed Assembly") #>
+<# Add_Field(n:="Assemblies", t:="System.Reflection.Assembly()", d:="All Referenced/Proximal Assemblies") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

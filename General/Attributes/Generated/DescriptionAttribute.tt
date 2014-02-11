@@ -1,0 +1,7 @@
+﻿<# Add_Class(i:="System.Attribute", u:=True, d:="This attribute should be used to decorate Classes or Properties so that they are correctly displayed.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.[Class] Or AttributeTargets.[Property]|At_Multiple:False|At_Inherited:False") #>
+<# Add_Behaviour(n:="Resourced", p:="Pr_Resourced:Description") #>
+<# Add_Field(n:="ResourceContainingType", t:="System.Type", d:="Type (and therefore Assembly) that contains the Resource.") #>
+<# Add_Field(n:="ResourceName", t:="System.String", d:="Name of the Resource") #>
+<# Add_Field(n:="Description", t:="System.String") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

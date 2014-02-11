@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Commands", c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:objects|Cm_Description:@commandObjectsDescription@") #>
+<# Add_Behaviour(n:="CommandFlag", p:="Fl_Resource=CommandDetails|Pr_CommandFlag:FieldsToSortAscending;FieldsToSortDescending;FieldsMarkingDuplicates|Fl_Flags:$;$$;~|Fl_Descriptions:@commandSortedDescriptionAscending@;@commandSortedDescriptionDescending@;@commandObjectsParameterDescriptionProperties@|Fl_Args:@commandFormatterParameterDescriptionProperties@;@commandFormatterParameterDescriptionProperties@;@commandObjectsParameterDescriptionDuplicateFields@") #>
+<#@ include file="..\Definitions\Command.def" #>
+<# Add_Field(n:="FieldsToSortAscending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="FieldsToSortDescending", t:="Leviathan.Inspection.MemberAnalyser()", f:="NEW") #>
+<# Add_Field(n:="FieldsMarkingDuplicates", t:="System.String()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

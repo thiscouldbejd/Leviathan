@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Visualisation", n:="Graph(Of T)") #>
+<# Add_Field(n:="Name", t:="System.String", d:="The Name of the Graph.") #>
+<# Add_Field(n:="Created", t:="System.DateTime", f:="DateTime.Now()") #>
+<# Add_Field(n:="CreatedBy", t:="System.String", f:="Leviathan") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

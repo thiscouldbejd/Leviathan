@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Commands", d:="Enum representing Key that is being previewed/pressed..") #>
+<# Add_Enum(n:="Input", v:=0, d:="None") #>
+<# Add_Enum(n:="Help", v:=1, d:="Help Key (Normally F1)") #>
+<# Add_Enum(n:="Tab", v:=2, d:="Tab Key (e.g. Move on to the Next Part of the Command)") #>
+<# Add_Enum(n:="Up", v:=3, d:="Up Key (e.g. Cycle through Alternatives)") #>
+<# Add_Enum(n:="Down", v:=4, d:="Down Key (e.g. Cycle through Alternatives)") #>
+<# Add_Enum(n:="Right", v:=5, d:="Right Key") #>
+<# Add_Enum(n:="Enter", v:=6, d:="Enter Key") #>
+<# Add_Enum(n:="ReverseTab", v:=7, d:="Reversed Tab Key (e.g. Move on to the Previous Part of the Command)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

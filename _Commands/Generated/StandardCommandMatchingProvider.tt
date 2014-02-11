@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="IndexedCommandClasses", t:="System.Collections.Generic.Dictionary(Of String, CommandInterrogatedClass)", f:="NEW", d:="Command Classes (indexed by name)") #>
+<# Add_Field(n:="Commands", t:="System.String()", f:="NEW", d:="Names of the Command Classes") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Commands", d:="Enum Representing Command Type") #>
+<# Add_Enum(n:="Unknown", v:=0, d:="No Type Clearly Indentified.") #>
+<# Add_Enum(n:="Transform", v:=1, d:="A Transformation command should transform objects and return the results, e.g. Mathmatical Functions, Set Correlations, Duplicate Removals, Aggregations etc. This could also include calls to a persistance layer.") #>
+<# Add_Enum(n:="Format", v:=2, d:="A Format command should prepare objects for Outputting.") #>
+<# Add_Enum(n:="Output", v:=3, d:="An Output Command should output Formatted Objects.") #>
+<# Add_Enum(n:="Process", v:=4, d:="A Process Command should return a Boolean indicating Success/Failure for the Process.") #>
+<# Add_Enum(n:="Retrieval", v:=5, d:="A Retrieval Command should return objects but not take any parameters (e.g. a cache enumeration)") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

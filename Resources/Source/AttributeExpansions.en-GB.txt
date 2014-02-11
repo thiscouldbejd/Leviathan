@@ -1,0 +1,4 @@
+; Name Attribute Descriptions
+
+nameDescriptionGeneralCollection = General Collection
+nameDescriptionStringCollection = String/Text Collection

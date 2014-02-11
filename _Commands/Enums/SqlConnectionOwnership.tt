@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands", d:="Enum to SQL Connection Ownership Details") #>
+<# Add_Enum(n:="Internal", v:=0, d:="Indicating the Connection is Internally Owned by the Method.") #>
+<# Add_Enum(n:="External", v:=1, d:="Indicating the Connection is Externally Owned.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

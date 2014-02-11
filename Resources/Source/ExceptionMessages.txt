@@ -1,0 +1,26 @@
+; Exceptions
+
+illegalIntegrationNullPrimaryObject = You cannot integrate objects when the primary object is nothing
+illegalIntegrationNullSecondaryObject = You cannot integrate objects when the secondary object is nothing
+illegalIntegrationTypeMismatch = You cannot integrate two objects of different types
+illegalObjectTombstone = Cannot tombstone a new object
+illegalRulesCollectionClear = Clear is an invalid operation
+illegalRulesCollectionInsert = Insert is an invalid operation
+illegalRulesCollectionRemove = Remove is an invalid operation
+illegalRulesCollectionSet = Changing an element is an invalid operation
+illegalTypeCollectionAdd = You cannot add this type to this collection
+illegalTypeCollectionIndexedSet = You cannot set an item to equal this type of object in this collection
+illegalTypeCollectionInsert = You cannot insert this type to this collection
+illegalLifeCycleableStateWrapperInstantiation = Cannot Instantiate Wrapper Object with Missing Delegate
+temporalComparisonsRangeInvalid = Range {0} is invalid, the Start must be equal to, or before, the End
+comparerArgumentUnexpected = Unexpected Argument: Arguments must be of Compatible Type
+
+; Serialiser Exceptions
+
+serialiserExceptionNoField = Can't find Named Field [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionWrongTypeName = Type Name is Wrong [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionTypeCreation = Can't create Requested Type [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionIterateFormat = Couldn't Parse Iterate-Format [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionLoadFrom = Couldn't Parse Load-From [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionIncompatibleType = Supplied Type is not compatible with Serialised Type [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]
+serialiserExceptionNonConfigurableType = Current Type has no Configurable Fields [Node Type:{0}, Node Name:{1}, Node Depth:{2}, Line Number:{3}]

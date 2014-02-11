@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Return Type/Type Implements (e.g. Implements an Interface etc).") #>
+<# Add_Field(n:="Implements", t:="System.Type") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

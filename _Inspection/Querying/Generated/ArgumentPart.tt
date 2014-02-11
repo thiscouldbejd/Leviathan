@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Argument Count.") #>
+<# Add_Field(n:="ArgumentCount", t:="System.Int32", d:="The Member's Argument Count", f:="1") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

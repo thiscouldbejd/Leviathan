@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Field(n:="Name", t:="System.String", o:=True, d:="Command Method Name") #>
+<# Add_Field(n:="Description", t:="System.String", d:="Command Method Description") #>
+<# Add_Field(n:="Type", t:="CommandType", d:="Command Method Type") #>
+<# Add_Field(n:="ArgumentCount", t:="System.Int32", d:="Command Method Argument Count") #>
+<# Add_Field(n:="ArgumentCountFlexible", t:="System.Int32", d:="Whether the Command Method Argument Count is Flexible (e.g. contains arrays/param arrays at the end)") #>
+<# Add_Field(n:="ParameterCount", t:="System.Int32", d:="Command Method Parameter Count") #>
+<# Add_Field(n:="InvokableMethod", t:="Leviathan.Inspection.MemberAnalyser", d:="Invokable Version of the Command Method") #>
+<# Add_Field(n:="Parameters", t:="CommandInterrogatedParameter()", d:="Interrogated Parameters for the Command Method") #>
+<# Add_Field(n:="FurtherDetails", t:="System.Object", o:=True) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

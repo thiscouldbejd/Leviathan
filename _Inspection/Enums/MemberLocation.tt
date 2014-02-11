@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Enum Representing Type Member Location.") #>
+<# Add_Enum(n:="Instance", d:="Member is located as an Instance Member.", v:=1, b:=True) #>
+<# Add_Enum(n:="Static", d:="Member is located as a Static Member.", v:=2, b:=True) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

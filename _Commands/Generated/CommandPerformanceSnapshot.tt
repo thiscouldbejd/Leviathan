@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Commands", d:="Command Performance Logging") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:TimeTaken") #>
+<# Add_Field(n:="WorkDone", t:="System.String", d:="The Work Done for the Event") #>
+<# Add_Field(n:="Details", t:="System.String", d:="The Details for the Event") #>
+<# Add_Field(n:="Order", t:="System.Int32", d:="The Order in which the Operation Occured") #>
+<# Add_Field(n:="Created", t:="System.DateTime", d:="The Start Time of the Performance Logging", f:="DateTime.Now") #>
+<# Add_Field(n:="WorkingSet", t:="System.Int64", d:="The Start Working Set of the Performance Logging", f:="Environment.WorkingSet") #>
+<# Add_Field(n:="TimeTaken", t:="System.TimeSpan", d:="The Time Taken for the Operation") #>
+<# Add_Field(n:="MemoryUsed", t:="System.Double", d:="The Memory Used for the Operation") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

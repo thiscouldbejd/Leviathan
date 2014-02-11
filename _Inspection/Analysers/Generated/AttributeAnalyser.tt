@@ -1,0 +1,3 @@
+﻿<# Add_Class(a:="Inspection", d:="Analysis Class for a Attribute.", c:=False) #>
+<# Add_Field(n:="Attribute", t:="System.Attribute", d:="Analysed Attribute") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

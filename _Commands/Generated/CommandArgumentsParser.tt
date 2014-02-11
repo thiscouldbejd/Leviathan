@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands", d:="Helper Class used to Parse Text Arguments") #>
+<# Add_Field(n:="RetainedArguments", t:="System.Char()", f:="New Char() {QUESTION_MARK}") #>
+<# Add_Field(n:="NonRetainedArguments", t:="System.Char()", f:="New Char() {QUOTE_SINGLE, QUOTE_DOUBLE}") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

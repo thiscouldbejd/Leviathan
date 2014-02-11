@@ -1,0 +1,8 @@
+﻿<# Add_Class(a:="Files", d:="Enum Representing Command Type") #>
+<# Add_Enum(n:="None", v:=0, b:="True") #>
+<# Add_Enum(n:="TargetDirectory", v:=1, b:="True") #>
+<# Add_Enum(n:="ChildDirectory", v:=2, b:="True") #>
+<# Add_Enum(n:="DescendantDirectory", v:=4, b:="True") #>
+<# Add_Enum(n:="ChildFile", v:=8, b:="True") #>
+<# Add_Enum(n:="DescendantFile", v:=16, b:="True") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

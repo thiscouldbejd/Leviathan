@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Location (e.g. Instance or Shared).") #>
+<# Add_Field(n:="Location", t:="MemberLocation", d:="The Member's Location", f:="MemberLocation.Instance") #>
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

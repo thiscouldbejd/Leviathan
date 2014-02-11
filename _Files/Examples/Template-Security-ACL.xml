@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Leviathan.Persistance.Files.DirectoryRepresentation->
+
+  <Leviathan.Persistance.Files.DirectoryRepresentation>
+
+    <Name>Template Parent Folder</Name>
+    
+    <Rules>
+
+      <Leviathan.Persistance.Files.AccessRuleRepresentation->
+
+        <Leviathan.Persistance.Files.AccessRuleRepresentation>
+          
+          <!-- Remarks - This should be prefixed by the domain name, or nothing to allow the software to make a 'best-guess' of the Domain -->
+          <!-- Remarks - Please use Domain Name, Computer Name or Builtin for well-known names (e.g. Administrators, Guests, Users) -->
+          <User>Guests</User>
+
+          <!-- Right Enumeration -->
+          <!-- AppendData: Specifies the right to append data to the end of a file. -->
+          <!-- ChangePermissions: Specifies the right to change the security and audit rules associated with a file or folder. -->
+          <!-- CreateDirectories: Specifies the right to create a folder. -->
+          <!-- CreateFiles: Specifies the right to create a file. -->
+          <!-- Delete: Specifies the right to delete a folder or file. -->
+          <!-- DeleteSubdirectoriesAndFiles: Specifies the right to delete a folder and any files contained within that folder. -->
+          <!-- ExecuteFile: Specifies the right to run an application file. -->
+          <!-- FullControl: Specifies the right to exert full control over a folder or file, and to modify access control and audit rules. This value represents the right to do anything with a file and is the combination of all rights in this enumeration. -->
+          <!-- ListDirectory: Specifies the right to read the contents of a directory. -->
+          <!-- Modify: Specifies the right to read, write, list folder contents, delete folders and files, and run application files. This right includes the System.Security.AccessControl.FileSystemRights.ReadAndExecute right, the System.Security.AccessControl.FileSystemRights.Write right, and the System.Security.AccessControl.FileSystemRights.Delete right. -->
+          <!-- Read: Specifies the right to open and copy folders or files as read-only. This right includes the System.Security.AccessControl.FileSystemRights.ReadData right, System.Security.AccessControl.FileSystemRights.ReadExtendedAttributes right, System.Security.AccessControl.FileSystemRights.ReadAttributes right, and System.Security.AccessControl.FileSystemRights.ReadPermissions right. -->
+          <!-- ReadAndExecute: Specifies the right to open and copy folders or files as read-only, and to run application files. This right includes the System.Security.AccessControl.FileSystemRights.Read right and the System.Security.AccessControl.FileSystemRights.ExecuteFile right. -->
+          <!-- ReadAttributes: Specifies the right to open and copy file system attributes from a folder or file. For example, this value specifies the right to view the file creation or modified date. This does not include the right to read data, extended file system attributes, or access and audit rules. -->
+          <!-- ReadData: Specifies the right to open and copy a file or folder. This does not include the right to read file system attributes, extended file system attributes, or access and audit rules. -->
+          <!-- ReadExtendedAttributes: Specifies the right to open and copy extended file system attributes from a folder or file. For example, this value specifies the right to view author and content information. This does not include the right to read data, file system attributes, or access and audit rules. -->
+          <!-- ReadPermissions: Specifies the right to open and copy access and audit rules from a folder or file. This does not include the right to read data, file system attributes, and extended file system attributes. -->
+          <!-- Synchronize: Specifies whether the application can wait for a file handle to synchronize with the completion of an I/O operation. -->
+          <!-- TakeOwnership: Specifies the right to change the owner of a folder or file. Note that owners of a resource have full access to that resource. -->
+          <!-- Traverse: Specifies the right to list the contents of a folder and to run applications contained within that folder. -->
+          <!-- Write: Specifies the right to create folders and files, and to add or remove data from files. This right includes the System.Security.AccessControl.FileSystemRights.WriteData right, System.Security.AccessControl.FileSystemRights.AppendData right, System.Security.AccessControl.FileSystemRights.WriteExtendedAttributes right, and System.Security.AccessControl.FileSystemRights.WriteAttributes right. -->
+          <!-- WriteAttributes: Specifies the right to open and write file system attributes to a folder or file. This does not include the ability to write data, extended attributes, or access and audit rules. -->
+          <!-- WriteData: Specifies the right to open and write to a file or folder. This does not include the right to open and write file system attributes, extended file system attributes, or access and audit rules. -->
+          <!-- WriteExtendedAttributes: Specifies the right to open and write extended file system attributes to a folder or file. This does not include the ability to write data, attributes, or access and audit rules. -->
+          <!-- Delete: Specifies the right to delete a folder or file. -->
+          <!-- Right Enumeration -->
+          <Right>Modify</Right>
+
+          <!-- Use Either Explicit Inheritance / Propagation Flags OR Complex Propogation Flags -->
+          <!-- Inheritance Enumeration -->
+          <!-- None: The ACE is not inherited by child objects. -->
+          <!-- ContainerInherit: The ACE is inherited by child container objects. -->
+          <!-- ObjectInherit: The ACE is inherited by child leaf objects. -->
+          <!-- Inheritance Enumeration -->
+          <Inheritance>ContainerInherit</Inheritance>
+
+          <!-- Propagation Enumeration -->
+          <!-- None:  -->
+          <!-- NoPropagateInherit: Specifies that the ACE is not propagated to child objects. -->
+          <!-- InheritOnly: Specifies that the ACE is propagated only to child objects. This includes both container and leaf child objects. -->
+          <!-- Propagation Enumeration -->
+          <Propagation>None</Propagation>
+
+          <!-- ComplexPropogation Enumeration -->
+          <!-- None: Nothing -->
+          <!-- TargetDirectory: Applies to this Directory. -->
+          <!-- ChildDirectory: Applies to Child Directories. -->
+          <!-- DescendantDirectory: Applies to Descendant Directories -->
+          <!-- ChildFile: Applies to Child Files. -->
+          <!-- DescendantFile: Applies to Descendant Files. -->
+          <!-- All: All of the Above -->
+          <!-- Remarks - You cannot just use Descendant Directory | Descendant File -->
+          <!-- Propogation Enumeration -->
+          <ComplexPropagation>TargetDirectory;ChildDirectory;ChildFile</ComplexPropagation>
+          
+          <!-- Type Enumeration -->
+          <!-- Allow: The System.Security.AccessControl.AccessRule object is used to allow access to a secured object. -->
+          <!-- Deny: The System.Security.AccessControl.AccessRule object is used to deny access to a secured object. -->
+          <!-- Type Enumeration -->
+          <Type>Allow</Type>
+          
+        </Leviathan.Persistance.Files.AccessRuleRepresentation>
+
+      </Leviathan.Persistance.Files.AccessRuleRepresentation->
+    
+  </Rules>
+
+    <Children>
+
+      <Leviathan.Persistance.Files.DirectoryRepresentation->
+
+        <Leviathan.Persistance.Files.DirectoryRepresentation>
+
+          <Name>Template Child Folder</Name>
+
+          <Rules>
+
+            <Leviathan.Persistance.Files.AccessRuleRepresentation->
+
+              <Leviathan.Persistance.Files.AccessRuleRepresentation>
+
+                <User>Guests</User>
+
+                <Right>Read</Right>
+
+                <Inheritance>ObjectInherit</Inheritance>
+
+                <Propogation>InheritOnly</Propogation>
+
+                <Type>Allow</Type>
+
+              </Leviathan.Persistance.Files.AccessRuleRepresentation>
+
+            </Leviathan.Persistance.Files.AccessRuleRepresentation->
+
+          </Rules>
+
+          <Children>
+
+            <Leviathan.Persistance.Files.DirectoryRepresentation->
+
+              <Leviathan.Persistance.Files.DirectoryRepresentation>
+
+                <Name>Template GrandChild Folder</Name>
+
+                <Rules>
+
+                  <Leviathan.Persistance.Files.AccessRuleRepresentation->
+
+                    <Leviathan.Persistance.Files.AccessRuleRepresentation>
+
+                      <User>Guests</User>
+
+                      <Right>Read</Right>
+
+                      <Inheritance>ObjectInherit</Inheritance>
+
+                      <Propogation>InheritOnly</Propogation>
+
+                      <Type>Allow</Type>
+
+                    </Leviathan.Persistance.Files.AccessRuleRepresentation>
+
+                  </Leviathan.Persistance.Files.AccessRuleRepresentation->
+
+                </Rules>
+
+              </Leviathan.Persistance.Files.DirectoryRepresentation>
+
+            </Leviathan.Persistance.Files.DirectoryRepresentation->
+
+          </Children>
+          
+        </Leviathan.Persistance.Files.DirectoryRepresentation>
+
+      </Leviathan.Persistance.Files.DirectoryRepresentation->
+
+    </Children>
+    
+  </Leviathan.Persistance.Files.DirectoryRepresentation>
+
+</Leviathan.Persistance.Files.DirectoryRepresentation->

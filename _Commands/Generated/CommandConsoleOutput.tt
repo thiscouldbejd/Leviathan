@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Commands", p:="PostConstructorCall()") #>
+<# Add_Field(n:="Create", t:="System.Boolean") #>
+<# Add_Field(n:="CharacterWidth", t:="System.Int32") #>
+<# Add_Field(n:="Title", t:="System.String") #>
+<# Add_Field(n:="Active", t:="System.Boolean") #>
+<# Add_Field(n:="HasWritten", t:="System.Boolean") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

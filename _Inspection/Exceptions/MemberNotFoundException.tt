@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Inspection", i:="Exception", u:=True, d:="Exception which should be thrown when a Member is Not Found.") #>
+<# Add_Behaviour(n:="Formattable", p:="Fo_Names:|Fo_Values:{Name} not found on {Type}") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Full Name of the Member") #>
+<# Add_Field(n:="Type", t:="System.Type", d:="Type upon which the Member cannot be found.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

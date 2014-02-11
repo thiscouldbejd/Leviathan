@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Inspection", d:="Enum representing different Analyser Entities Types.") #>
+<# Add_Enum(n:="AssemblyAnalyser") #>
+<# Add_Enum(n:="TypeAnalyser") #>
+<# Add_Enum(n:="AttributeAnalyser") #>
+<# Add_Enum(n:="MemberAnalyser") #>
+<# Add_Enum(n:="MethodAnalyser") #>
+<# Add_Enum(n:="FolderAnalyser") #>
+<# Add_Enum(n:="ExceptionAnalyser") #>
+<# Add_Enum(n:="ConstructorAnalyser") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

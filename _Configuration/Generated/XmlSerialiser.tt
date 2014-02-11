@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Configuration", d:="Serialising Class for Xml, provides in and out functionality") #>
+<# Add_Behaviour(n:="Disposable", p:="Di_Fields:InputReader;OutputWriter") #>
+<# Add_Field(n:="InputReader", t:="System.Xml.XmlTextReader", a:="R", d:="Source XML Document Stream") #>
+<# Add_Field(n:="OutputWriter", t:="System.Xml.XmlTextWriter", a:="R", d:="Target XML Document Stream") #>
+<# Add_Field(n:="Parser", t:="FromString", a:="R", f:="NEW") #>
+<# Add_Field(n:="Formatting_Value", t:="System.Object") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

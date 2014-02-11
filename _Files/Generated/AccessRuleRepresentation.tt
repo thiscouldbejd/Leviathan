@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Files", d:="Class Representing an Access Control Rule.") #>
+<# Add_Field(n:="User", t:="System.Security.Principal.NTAccount") #>
+<# Add_Field(n:="Right", t:="System.Security.AccessControl.FileSystemRights") #>
+<# Add_Field(n:="Inheritance", t:="System.Security.AccessControl.InheritanceFlags") #>
+<# Add_Field(n:="Propagation", t:="System.Security.AccessControl.PropagationFlags") #>
+<# Add_Field(n:="Type", t:="System.Security.AccessControl.AccessControlType") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

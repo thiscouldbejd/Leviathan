@@ -1,0 +1,3 @@
+﻿<# Add_Class(a:="Commands", i:="System.Attribute", u:=True, d:="This attribute should be applied to fields/properties in a provider class. These fields will then be parsed from the configuration. Do not use field initialised variables if applying this attribute to a variable as the configured variable will likely be over-written by the initialised variable due to the instantiation stack for an object. Use the Default Value property instead.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.Parameter|At_Multiple:False|At_Inherited:True") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Commands", c:=False) #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:data|Cm_Description:@commandDataDescription@") #>
+<# Add_Behaviour(n:="CommandFlag", p:="Fl_Resource=CommandDetails|Pr_CommandFlag:Source|Fl_Flags:source|Fl_Descriptions:@commandDataDescriptionSource@|Fl_Args:@commandDataParameterDescriptionSource@") #>
+<#@ include file="..\Definitions\Command.def" #>
+<# Add_Field(n:="Source", t:="System.String") #>
+<# Add_Field(n:="Connections", t:="System.Collections.Generic.Dictionary(Of String, System.Data.SqlClient.SqlConnection)", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

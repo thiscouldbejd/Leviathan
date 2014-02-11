@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Leviathan.AssemblyConfig>
+
+	<Sources>
+
+		<Leviathan.Commands.ICommandsProvider->
+
+			<!-- Description = Standard Provider that Interrogates the Current Directory -->
+			<Leviathan.Commands.FileSystemCommandsProvider>
+
+				<Directory>.</Directory>
+
+			</Leviathan.Commands.FileSystemCommandsProvider>
+
+			<!-- Description = Alias Provider that Interrogates the Current Command Directory -->
+			<Leviathan.Commands.Aliasing.AliasCommandsProvider>
+
+				<Aliases load-from=".commands\*.command.xml" />
+
+			</Leviathan.Commands.Aliasing.AliasCommandsProvider>
+
+		</Leviathan.Commands.ICommandsProvider->
+
+	</Sources>
+
+	<Matcher>
+
+		<!-- Description = Standard Matcher that Interrogates the Current Directory -->
+		<Leviathan.Commands.StandardCommandMatchingProvider />
+
+	</Matcher>
+
+</Leviathan.AssemblyConfig>

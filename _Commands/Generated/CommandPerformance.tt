@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands", d:="Command Performance Logging") #>
+<# Add_Field(n:="Start", t:="CommandPerformanceSnapshot", d:="The Start Event", f:="NEW") #>
+<# Add_Field(n:="Events", t:="System.Collections.Generic.List(Of CommandPerformanceSnapshot)", d:="The Work Steps", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

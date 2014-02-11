@@ -1,0 +1,12 @@
+﻿<# Add_Class(a:="Commands", d:="Enum Representing Value Type (for Pivoting)") #>
+<# Add_Enum(n:="Value", v:=0) #>
+<# Add_Enum(n:="Count", v:=1) #>
+<# Add_Enum(n:="Sum", v:=2) #>
+<# Add_Enum(n:="Average", v:=3) #>
+<# Add_Enum(n:="Present", v:=4) #>
+<# Add_Enum(n:="NotPresent", v:=5) #>
+<# Add_Enum(n:="Max", v:=6) #>
+<# Add_Enum(n:="Min", v:=7) #>
+<# Add_Enum(n:="Percentage", v:=9) #>
+<# Add_Enum(n:="BackgroundPresent", v:=10) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

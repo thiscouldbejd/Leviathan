@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands", d:="Property used in Formatting.", i:="Leviathan.Inspection.MemberAnalyser") #>
+<# Add_Field(n:="Length", t:="System.Int32", d:="The Length of the Formatted Object.") #>
+<# Add_Field(n:="InternalDisplayName", t:="System.String", d:="The Display Name of the Formatted Object.") #>
+<# Add_Field(n:="Index", t:="System.Object", d:="The Indexed Value.") #>
+<# Add_Field(n:="Highlights", t:="System.Collections.Generic.List(Of HighlightedCondition)", d:="The Hightlighted Conditions for the Property") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

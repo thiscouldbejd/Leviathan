@@ -1,0 +1,13 @@
+﻿<# Add_Class(a:="Inspection", d:="Analysis Class for a Member (e.g. Field, Property Or Method).") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name;Child") #>
+<# Add_Behaviour(n:="Hashable") #>
+<# Add_Behaviour(n:="Parsable", p:="Pr_Parsable:Name") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Member Name") #>
+<# Add_Field(n:="Description", t:="System.String", d:="Member Friendly Description") #>
+<# Add_Field(n:="Child", t:="MemberAnalyser", d:="Member Child") #>
+<# Add_Field(n:="Field", t:="System.Reflection.FieldInfo", d:="Field") #>
+<# Add_Field(n:="Property", t:="System.Reflection.PropertyInfo", d:="Property") #>
+<# Add_Field(n:="Method", t:="System.Reflection.MethodInfo", d:="Method") #>
+<# Add_Field(n:="Constructor", t:="System.Reflection.ConstructorInfo", d:="Constructor") #>
+<# Add_Field(n:="DefaultArguments", t:="System.Object()", d:="Default Arguments of the Member") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

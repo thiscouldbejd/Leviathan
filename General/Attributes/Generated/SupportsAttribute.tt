@@ -1,0 +1,4 @@
+﻿<# Add_Class(i:="System.Attribute", u:=True, d:="This attribute should be applied to providers which support Interception by a particular type.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.Class|At_Multiple:False|At_Inherited:False") #>
+<# Add_Field(n:="SupportedFeatures", t:="System.Int32") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

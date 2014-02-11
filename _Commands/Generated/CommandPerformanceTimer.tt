@@ -1,0 +1,6 @@
+<# Add_Class(a:="Commands", c:="True", p:="Start()") #>
+<# Add_Field(n:="EndTime", t:="System.Int64", d:="") #>
+<# Add_Field(n:="StartTime", t:="System.Int64", d:="") #>
+<# Add_Field(n:="LapTime", t:="System.Int64", d:="") #>
+<# Add_Field(n:="TicksPerSecond", t:="System.Int64", d:="") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

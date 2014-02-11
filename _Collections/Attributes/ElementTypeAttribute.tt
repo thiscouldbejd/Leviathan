@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Collections", i:="Attribute", u:=True, d:="This attribute should declare the Type of object that is encapsulated by the collection.") #>
+<# Add_Behaviour(n:="Attributable", p:="At_Targets:AttributeTargets.[Class]|At_Multiple:False|At_Inherited:False") #>
+<# Add_Field(n:="Type", t:="System.Type", d:="The Object/Element Type") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

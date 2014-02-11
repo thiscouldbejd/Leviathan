@@ -1,0 +1,3 @@
+﻿<# Add_Behaviour(n:="Constructable") #>
+<# Add_Behaviour(n:="Hashable") #>
+<# Add_Behaviour(n:="Settable") #>

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands.Aliasing", i:="CommandInterrogatedMethod", d:="Command Expansion") #>
+<# Add_Field(n:="Alias", t:="Aliasing.Alias") #>
+<# Add_Field(n:="Return", t:="ArrayList") #>
+<# Add_Field(n:="Total", t:="System.Int32") #>
+<# Add_Field(n:="Lock", t:="Object", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

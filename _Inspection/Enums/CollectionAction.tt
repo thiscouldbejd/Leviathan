@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Inspection", d:="Enum representing Array/Collection/List Actions.") #>
+<# Add_Enum(n:="RemoveObject") #>
+<# Add_Enum(n:="RemoveObjects") #>
+<# Add_Enum(n:="RemoveIndex") #>
+<# Add_Enum(n:="AddObject") #>
+<# Add_Enum(n:="AddObjects") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

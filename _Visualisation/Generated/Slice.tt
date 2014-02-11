@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Visualisation") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Generated") #>
+<# Add_Field(n:="Rows", t:="System.Collections.Generic.List(Of Row)", f:="NEW") #>
+<# Add_Field(n:="Generated", t:="System.DateTime", d:="When the data was generated.", f:="System.DateTime.Now()") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

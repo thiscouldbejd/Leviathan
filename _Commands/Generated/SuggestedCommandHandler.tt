@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:SuggestionsEnabled") #>
+<# Add_Field(n:="SuggestionsEnabled", t:="System.Boolean", a:="R") #>
+<# Add_Field(n:="Input", t:="SuggestedCommandInput", a:="R", f:="NEW", e:=True) #>
+<# Add_Field(n:="Output", t:="SuggestedCommandOutput", a:="R", f:="NEW", e:=True) #>
+<# Add_Field(n:="RetainedArguments", t:="System.Char()", f:="New Char() {SPACE, QUOTE_SINGLE, QUOTE_DOUBLE}") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

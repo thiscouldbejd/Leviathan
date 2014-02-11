@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Collections", n:="DataCollection(Of T)", x:=True) #>
+<# Add_Behaviour(n:="Serialisable") #>
+<# Add_Field(n:="Command", t:="System.Data.IDbCommand", a:="R") #>
+<# Add_Field(n:="Reader", t:="System.Data.IDataReader", a:="R") #>
+<# Add_Field(n:="Previous", t:="System.Collections.Generic.List(Of T)", f:="NEW", a:="R") #>
+<# Add_Field(n:="Current", t:="T", a:="R", i:="IEnumerator(Of T).Current") #>
+<# Add_Field(n:="Initialised", t:="System.Boolean", a:="R") #>
+<# Add_Field(n:="OwnerThread", t:="System.Int32", a:="R", f:="System.Threading.Thread.CurrentThread.ManagedThreadId") #>
+<# Add_Field(n:="Index", t:="System.Int32", a:="R") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

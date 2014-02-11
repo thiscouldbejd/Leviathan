@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Inspection", d:="Analysis Class for a Folder", c:=False, s:=True) #>
+<# Add_Field(n:="Folder", t:="System.IO.DirectoryInfo", d:="Base Path (Directory/Folder) used in this Analyser", f:="New IO.FileInfo(Assembly.GetEntryAssembly.Location).Directory") #>
+<# Add_Field(n:="Host", t:="Leviathan.Commands.ICommandsExecution", d:="The Host Process, if invoked via a command (for error display)") #>
+<# Add_Field(n:="AssemblyFilePaths", t:="System.IO.FileInfo()", a:="", d:="Assembly File Paths Detected by this Analyser") #>
+<# Add_Field(n:="AssemblyFilePaths_LOCK", t:="System.Object", a:="", f:="NEW") #>
+<# Add_Field(n:="AssemblyFilePaths_HASVALUE", t:="System.Boolean", a:="") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

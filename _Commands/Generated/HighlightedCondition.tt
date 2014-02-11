@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Commands", d:="Condition used in Highlighting.") #>
+<# Add_Field(n:="Condition", t:="System.String", d:="The Highlight Condition.") #>
+<# Add_Field(n:="Type", t:="Leviathan.Visualisation.InformationType", d:="The Hightlight Type.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

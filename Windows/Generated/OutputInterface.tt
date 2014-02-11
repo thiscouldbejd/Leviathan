@@ -1,0 +1,18 @@
+﻿<# Add_Class(i:="System.Windows.Window", p:="InitializeComponent()", g:=False) #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:CurrentCharacterWidth") #>
+<# Add_Field(n:="Command", t:="System.String") #>
+<# Add_Field(n:="Id", t:="System.Int32") #>
+<# Add_Field(n:="Completed", t:="System.Boolean") #>
+<# Add_Field(n:="LastProgress", t:="System.Single") #>
+<# Add_Field(n:="ReturnInput", t:="System.String") #>
+<# Add_Field(n:="ReturnedInput", t:="System.Boolean") #>
+<# Add_Field(n:="OPACITY_ACTIVE", t:="System.Double", f:="0.95") #>
+<# Add_Field(n:="OPACITY_INACTIVE", t:="System.Double", f:="0.6") #>
+<# Add_Field(n:="OPACITY_THREAD", t:="System.Threading.Thread") #>
+<# Add_Field(n:="OPACITY_FAST", t:="System.Int32", f:="100") #>
+<# Add_Field(n:="OPACITY_SLOW", t:="System.Int32", f:="1500") #>
+<# Add_Field(n:="Window_Locked", t:="System.Boolean") #>
+<# Add_Field(n:="COLOUR_UNLOCKED_BORDER", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 26, 26, 26)") #>
+<# Add_Field(n:="COLOUR_LOCKED_BORDER", t:="System.Windows.Media.Color", f:="Windows.Media.Color.FromArgb(255, 52, 26, 26)") #>
+<# Add_Field(n:="Opacity_Locked", t:="System.Boolean") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

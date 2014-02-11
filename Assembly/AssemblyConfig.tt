@@ -1,0 +1,11 @@
+﻿<# Add_Class(d:="Holds the Assembly Configuration") #>
+<# Add_Behaviour(n:="Configurable", p:="Pr_Configurable:Matcher;Sources") #>
+<# Add_Behaviour(n:="Settable") #>
+<# Add_Field(n:="Started", t:="System.DateTime", f:="DateTime.Now") #>
+<# Add_Field(n:="Matcher", t:="ICommandsMatcher") #>
+<# Add_Field(n:="Sources", t:="ICommandsProvider()") #>
+<# Add_Field(n:="CommandClasses", t:="CommandInterrogatedClass()", f:="NEW") #>
+<# Add_Field(n:="InterrogatedCommands", t:="CommandInterrogated()", f:="NEW") #>
+<# Add_Field(n:="Finished", t:="System.DateTime") #>
+<# Add_Field(n:="Loaded", t:="System.DateTime") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

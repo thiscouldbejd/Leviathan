@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Leviathan.Testing.TestParsableObject3>
+  <AField1>
+    <Leviathan.Testing.TestParsableObject2>
+      <AField1>Test</AField1>
+      <AField2>
+        <Leviathan.Testing.TestParsableObject>
+          <AProperty1>10</AProperty1>
+          <Prop3>0</Prop3>
+          <Prop4>0</Prop4>
+          <AProperty2>
+            <System.Collections.ArrayList />
+          </AProperty2>
+        </Leviathan.Testing.TestParsableObject>
+      </AField2>
+    </Leviathan.Testing.TestParsableObject2>
+  </AField1>
+  <AField2>
+    <Leviathan.Testing.TestParsableObject2>
+      <AField1>Test</AField1>
+      <AField2>
+        <Leviathan.Testing.TestParsableObject>
+          <AProperty1>10</AProperty1>
+          <Prop3>0</Prop3>
+          <Prop4>0</Prop4>
+          <AProperty2>
+            <System.Collections.ArrayList />
+          </AProperty2>
+        </Leviathan.Testing.TestParsableObject>
+      </AField2>
+    </Leviathan.Testing.TestParsableObject2>
+  </AField2>
+  <AField3>00000000-0000-0000-0000-000000000000</AField3>
+</Leviathan.Testing.TestParsableObject3>

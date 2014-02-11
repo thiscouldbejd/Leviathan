@@ -1,0 +1,10 @@
+﻿<# Add_Class(a:="Comparison", d:="Enum representing Date Comparison Results.") #>
+<# Add_Enum(n:="NO_OVERLAP", v:=1, b:=True) #>
+<# Add_Enum(n:="END_OVERLAP", v:=2, b:=True) #>
+<# Add_Enum(n:="START_OVERLAP", v:=4, b:=True) #>
+<# Add_Enum(n:="FULL_OVERLAP", v:=8, b:=True) #>
+<# Add_Enum(n:="FULL_ENCLOSURE", v:=16, b:=True) #>
+<# Add_Enum(n:="SAME", v:=32, b:=True) #>
+<# Add_Enum(n:="CLEAR", v:=1, b:=True) #>
+<# Add_Enum(n:="NOTCLEAR", v:=2 Or 4 Or 8 Or 16 Or 32) #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

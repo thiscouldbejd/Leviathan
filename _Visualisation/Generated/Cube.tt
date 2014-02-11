@@ -1,0 +1,7 @@
+﻿<# Add_Class(a:="Visualisation") #>
+<# Add_Field(n:="Title", t:="Message", d:="The Title of the Data.") #>
+<# Add_Field(n:="Columns", t:="System.Collections.Generic.List(Of Leviathan.Commands.FormatterProperty)", f:="NEW") #>
+<# Add_Field(n:="Slices", t:="System.Collections.Generic.List(Of Slice)", f:="NEW") #>
+<# Add_Field(n:="ColumnLengths", t:="System.Int32()") #>
+<# Add_Field(n:="TotalColumnLength", t:="System.Int32") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Inspection", d:="Query Part for Attribute Presence and Name/Value Property Matching on the Attribute.") #>
+<# Add_Field(n:="AttributeType", t:="System.Type", d:="The Member's Attribute") #>
+<# Add_Field(n:="PropertyValuesToMatch", t:="System.Collections.DictionaryEntry()", f:="New System.Collections.DictionaryEntry() {}") #> 
+<#@ include file="..\Behaviours\QueryPartBehaviours.def" #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

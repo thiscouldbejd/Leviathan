@@ -1,0 +1,5 @@
+﻿<# Add_Class(a:="Commands", d:="Enum Representing Outputted Type") #>
+<# Add_Enum(n:="Message") #>
+<# Add_Enum(n:="Messages") #>
+<# Add_Enum(n:="PropertyValueCube") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Enum.tt" #>

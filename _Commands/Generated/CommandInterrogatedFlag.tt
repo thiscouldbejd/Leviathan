@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:FlagAttribute") #>
+<# Add_Field(n:="FlagAttribute", t:="ConfigurableAttribute", d:="Attribute which decorated the Flag") #>
+<# Add_Field(n:="FieldName", t:="System.String", d:="Field Name that was decorated") #>
+<# Add_Field(n:="FieldType", t:="System.Type", d:="Field Type that was decorated") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

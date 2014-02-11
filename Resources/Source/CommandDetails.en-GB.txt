@@ -1,0 +1,161 @@
+﻿; Entry Commands
+; --------------
+
+commandDescriptionSimpleHelp = Enable Help Output (can be preceded by nothing, a command/partial command or type/type!member)
+commandDescriptionComplexHelp = Enable (including hidden commands) Help Output (can be preceded by nothing, a command/partial command or type/type!member)
+commandDescriptionTimed = Enable Timed/Memory Measured Output
+commandDescriptionDebug = Enable Debug Output
+commandDescriptionSilent = Enable Silent Output
+commandDescriptionErrors = Enable Errors-Only Output
+commandDescriptionLeviathan = JLI Environment
+commandDescriptionFileOutput = Enable File Output
+commandDescriptionEmailOutput = Enable Email Output
+commandDescriptionHtmlEmailOutput = Enable Html Email Output
+commandDescriptionIterations = Repeat Command Executions (to measure performance etc)
+commandDescriptionMailServer = SMTP Server
+commandDescriptionMailPort = SMTP Port
+commandDescriptionMailSSL = SMTP SSL
+commandDescriptionMailAuthDomain = Authentication Domain
+commandDescriptionMailAuthUser = Authentication Username
+commandDescriptionMailAuthPass = Authentication Password
+commandDescriptionMailFrom = Mail Address Sent From
+commandDescriptionMailFromDisplay = Mail Display Sent From
+commandDescriptionMailReplyTo = Mail Address Sent Reply To
+commandDescriptionMailReplyToDisplay = Mail Display Sent Reply To
+commandDescriptionMailLogging = Mail Logging Directory
+commandDescriptionMailSuppress = Suppress Mail Sending
+commandDescriptionMailWidth = Number of Characters Width for Mail Displays
+commandParameterDescriptionTimedIterations = <number of iterations to execute>
+commandParameterDescriptionFileStreams = <file name/s or path/s>
+commandParameterDescriptionHostEntry = <fqdn or ip address>
+commandParameterDescriptionEmailAddress = <email address>
+commandParameterDescriptionEmailAddresses = <email address/es>
+commandParameterDescriptionDirectory = <directory name or path>
+
+
+; Control Commands
+; ----------------
+commandControlDescription = Control Execution Commands (e.g. conditional, store, loop)
+commandControlDescriptionConditionalSuccess = Execute Conditional Command if Source Evaluates to Success
+commandControlDescriptionConditionalFailure = Execute Conditional Command if Source Evaluates to Failure
+commandControlDescriptionConditionalExists = Execute Command if Source Exists
+commandControlDescriptionIterate = Execute Command in Iterative Loop
+commandControlDescriptionIterateAggregate = Execute Command in Iterative Loop (With Aggregated Results)
+commandControlDescriptionInterval = Execute Command in Timer Control Loop
+
+commandControlDescriptionAppend = Appends an Object/s (to an ex into the Command Storage Area (e.g 
+commandControlDescriptionPut = Puts an Object(s) into the Command Storage Area
+commandControlDescriptionGet = Gets an Object(s) from the Command Storage Area
+commandControlDescriptionEnumerate = Enumerate Object(s) from the Command Storage Area
+commandControlDescriptionEvict = Evict Object(s) from the Command Storage Area
+commandControlDescriptionPersist = Persist Object(s) from the Command Storage Area
+
+commandControlParameterDescriptionObjects = Object/s
+commandControlParameterDescriptionName = Name/Code for the Object(s)
+commandControlParameterDescriptionSource = Source Object(s)
+commandControlParameterDescriptionExecutionCommand = Command to be Executed
+commandControlParameterDescriptionIntervalSpan = Interval Timespan
+commandControlParameterDescriptionIntervalRepetitions = Maximum Repetitions of the Interval to Execute
+commandControlParameterOutputFile = Output File
+
+; Cryptography Commands
+; ---------------------
+commandCryptographyDescription = Cryptography Commands
+commandCryptographyDescriptionEncrypt = Encrypt Value
+commandCryptographyDescriptionHash = Hash Value
+
+commandCryptographyParameterDescriptionValue = Value To Encrypt/Hash
+commandCryptographyParameterDescriptionKey = Encryption Key
+
+
+; Data Commands
+; ---------------------
+commandDataDescription = Data Commands
+commandDataDescriptionSource = The Data Source to Use
+commandDataParameterDescriptionSource = <connection string|dsn>
+
+
+; File Commands
+; -------------
+commandFilesDescription = File/Directory Manipulation Commands
+commandFilesDescriptionRenameOrdinal = Rename Files in a Directory as Ordinals
+commandFilesDescriptionAppendSecurity = Append Security on Directories/Files.
+commandFilesDescriptionReplaceSecurity = Replace Security on Directories/Files.
+commandFilesDescriptionAuditSecurity = Audit Security on Directories/Files.
+commandFilesDescriptionRemoveDuplicates = Remove Duplicate Files in a Directory
+commandFilesDescriptionTransformXml = Transform XML File
+commandFilesDescriptionParseRobocopyLogs = Parse Robocopy Logs (for Details)
+commandFilesDescriptionOutputCsv = Output Visualisation Cube (last slice) to CSV
+
+commandFilesParameterDirectories = Directory/Directories
+commandFilesParameterPattern = Search Pattern to Use
+commandFilesParameterStart = Start Ordinal to Use
+commandFilesParameterDirectoryRepresentation = Directory Representation to Use
+commandFilesParameterBaseDirectory = Base Directory To Use
+commandFilesParameterCreateMissingDirectories = Create Missing Directory Structure?
+commandFilesParameterInputFile = Input File
+commandFilesParameterOutputFile = Output File
+commandFilesParameterTransformingFile = Transforming File
+commandFilesParameterDescriptionFormattedObjects = Formatted Cube/s
+
+
+; String Commands
+; ---------------
+commandStringsDescription = String Manipulation Commands
+commandStringsDescriptionNamedFormat = Format a String Using Name/Value Pairs
+
+commandStringsParameterNames = Formatting Names
+commandStringsParameterValues = Formatting Values
+
+; Objects Commands
+; ----------------
+commandObjectsDescription = Object Manipulation Commands
+commandObjectsDescriptionLoad = Load Objects from a File (e.g. xml)
+commandObjectsDescriptionSave = Save Objects to a File (e.g. xml)
+commandObjectsDescriptionSelect = Select Object/s from a List
+commandObjectsDescriptionProperties = Select Properties from Object/s
+commandObjectsDescriptionSplit = Split Objects
+commandObjectsDescriptionRemoveDuplicates = Remove Duplicate Objects from a Array/IList
+commandObjectsDescriptionDuplicateFields = Equal Fields Marking Duplicates
+
+commandObjectsParameterDescriptionLoadPath = Path to Load From
+commandObjectsParameterDescriptionSavePath = Path to Save To
+commandObjectsParameterDescriptionObjects = Object/s
+commandObjectsParameterDescriptionObjectType = Object Type
+commandObjectsParameterDescriptionNumber = Number of Objects to Select
+commandObjectsParameterDescriptionProperties = Properties
+commandObjectsParameterDescriptionDuplicateFields = Field or Property Names
+
+
+; Formatter Command Descriptions
+; ------------------------------
+commandFormatterDescription = Object Formatting Commands
+commandFormatterStandardDescription = Format Object/s as a Grid
+commandFormatterCSVDescription = Format Object/s as a Grid and Output to CSV
+commandFormatterPropertiesDescriptionOverride = Override Column/s For Formatted Display
+commandFormatterPropertiesDescriptionAdd = Add Column/s For Formatted Display
+commandFormatterPropertiesDescriptionRemove = Remove Column/s For Formatted Display
+commandFormatterOverlayDescription = Formats Object/s as an Intersecting Overlay
+commandFormatterPivotDescription = Format Object/s as a Pivot
+commandFormatterPivotDescriptionColumn = Field that should be used as the Column
+commandFormatterPivotDescriptionColumnSortDescending = Sort Column by Field (Descending Sort)
+commandFormatterPivotDescriptionColumnSortAscending = Sort Column by Field (Ascending Sort)
+commandFormatterPivotDescriptionRow = Field that should be used as the Row
+commandFormatterPivotDescriptionRowSortDescending = Sort Row by Field (Descending Sort)
+commandFormatterPivotDescriptionRowSortAscending = Sort Row by Field (Ascending Sort)
+commandFormatterPivotDescriptionValue = Field that should be used as the Value
+commandFormatterPivotDescriptionValueRepresentation = How the Value should be represented
+commandFormatterPivotDescriptionRounding = How many Decimal Places should be used for Rounding
+commandFormatterParameterDescriptionObjects = Formattable Object(s)
+commandFormatterParameterDescriptionTitle = Formattable Output Title
+commandFormatterParameterDescriptionOverlayFirstObject = First Formattable Object
+commandFormatterParameterDescriptionOverlayOtherObjects = Other Formattable Object(s)
+commandFormatterParameterDescriptionProperties = <property names[index](display name):length>
+commandFormatterParameterDescriptionRepresentation = <representation type>
+commandFormatterParameterDescriptionRounding = <number of places to round to>
+commandFormatterParameterDescriptionOutputFile = Output CSV File
+
+; Sorted Command Descriptions
+; ---------------------------
+commandSortedDescriptionAscending = Sort by Field (Ascending Sort)
+commandSortedDescriptionDescending = Sort by Field (Descending Sort)

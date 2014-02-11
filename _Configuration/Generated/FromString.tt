@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Configuration", p:="Populate()", d:="Responsible for Parsing String Representations of Objects to Actual Objects.") #>
+<# Add_Field(n:="TypeParsingMethods", t:="System.Collections.Hashtable", a:="R", f:="NEW") #>
+<# Add_Field(n:="RegexParsingMethods", t:="System.Collections.Hashtable", a:="R", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

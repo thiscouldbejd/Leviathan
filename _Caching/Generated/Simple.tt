@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Caching", d:="Simple Caching Class", c:=False, s:=True) #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:Cache") #>
+<# Add_Field(n:="TypeHashCode", t:="System.Int32", a:="R", d:="HashCode for Type whose Values to Cache.") #>
+<# Add_Field(n:="RaisesEvents", t:="System.Boolean", a:="R", d:="Whether Events are raised when Cache Changes.") #>
+<# Add_Field(n:="Cache", t:="System.Collections.Hashtable", a:="R", f:="NEW") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

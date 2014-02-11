@@ -1,0 +1,11 @@
+﻿<# Add_Class(a:="Commands", p:="PopulateFromConstructor()") #>
+<# Add_Behaviour(n:="Comparable", p:="Fd_Comparable:Name") #>
+<# Add_Field(n:="Name", t:="System.String", d:="Command Class Name") #>
+<# Add_Field(n:="Analyser", t:="Leviathan.Inspection.TypeAnalyser", d:="Command Class Analyser") #>
+<# Add_Field(n:="Description", t:="System.String", d:="Command Class Description") #>
+<# Add_Field(n:="Hidden", t:="System.Boolean", d:="Whether the Command Class is Hidden") #>
+<# Add_Field(n:="AssemblyName", t:="System.String", d:="Command Class Assembly Name") #>
+<# Add_Field(n:="AssemblyVersion", t:="System.String", d:="Command Class Assembly Version") #>
+<# Add_Field(n:="Flags", t:="CommandInterrogatedFlag()", d:="Command Class Flags") #>
+<# Add_Field(n:="Methods", t:="CommandInterrogatedMethod()", d:="Command Class Methods") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

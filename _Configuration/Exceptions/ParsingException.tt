@@ -1,0 +1,4 @@
+﻿<# Add_Class(a:="Configuration", i:="Exception") #>
+<# Add_Field(n:="Argument", t:="String", d:="The Argument which failed to Parse") #>
+<# Add_Field(n:="Type", t:="System.Type", d:="The Type to Parse To.") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

@@ -1,0 +1,44 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="Command", p:="Cm_Resource:CommandDetails|Cm_Name:leviathan|Cm_Description:@commandDescriptionLeviathan@") #>
+<# Add_Behaviour(n:="CommandFlag", p:="Fl_Resource:CommandDetails|" & _
+"Pr_CommandFlag:IsSimpleHelpEnabled;IsComplexHelpEnabled;IsTimedEnabled;IsDebugEnabled;IsVerboseEnabled;IsSilentEnabled;IsErrorsEnabled;FileOutputs;Iterations;EmailOutputs;HtmlEmailOutputs;MailLog;MailSuppress;MailServer;MailServerPort;MailServerSSL;MailServerDomain;MailServerUsername;MailServerPassword;MailFromAddress;MailFromDisplay;MailReplyToAddress;MailReplyToDisplay;MailWidth|" & _
+"Fl_Flags:?;??;timed;debug;verbose;silent;errors;file;iterations;email;html-email;mail-log;mail-suppress;mail-server;mail-server-port;mail-server-ssl;mail-server-auth-domain;mail-server-auth-username;mail-server-auth-password;mail-from;mail-from-display;mail-replyto;mail-replyto-display;mail-width|" & _
+"Fl_Descriptions:@commandDescriptionSimpleHelp@;@commandDescriptionComplexHelp@;@commandDescriptionTimed@;@commandDescriptionDebug@;@commandDescriptionVerbose@;@commandDescriptionSilent@;@commandDescriptionErrors@;" & _
+"@commandDescriptionFileOutput@;@commandDescriptionIterations@;@commandDescriptionEmailOutput@;@commandDescriptionHtmlEmailOutput@;@commandDescriptionMailLogging@;@commandDescriptionMailSuppress@;@commandDescriptionMailServer@;@commandDescriptionMailPort@;@commandDescriptionMailSSL@;@commandDescriptionMailAuthDomain@;@commandDescriptionMailAuthUser@;@commandDescriptionMailAuthPass@;@commandDescriptionMailFrom@;@commandDescriptionMailFromDisplay@;@commandDescriptionMailReplyTo@;@commandDescriptionMailReplyToDisplay@;@commandDescriptionMailWidth@|" & _
+"Fl_Args:;;;;;;;@commandParameterDescriptionFileStreams@;@commandParameterDescriptionTimedIterations@;@commandParameterDescriptionEmailAddresses@;@commandParameterDescriptionEmailAddresses@;@commandParameterDescriptionDirectory@;;@commandParameterDescriptionHostEntry@;;;;;;@commandParameterDescriptionEmailAddress@;;@commandParameterDescriptionEmailAddress@;;|" & _
+"Fl_Prefixes:/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/;/") #>
+<# Add_Field(n:="Args", t:="System.String()") #>
+<# Add_Field(n:="InteractiveOutput", t:="ICommandsInteractive") #>
+<# Add_Field(n:="IsSilentEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="IsErrorsEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="ParameterRegex", t:="System.String", f:="(?<=^\?)[A-z0-9_''""""].*(?=\?$)") #>
+<# Add_Field(n:="FileRegex", t:="System.String", f:="(?<=^\%)[A-z0-9_''""""].*(?=\%$)") #>
+<# Add_Field(n:="IsSimpleHelpEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="IsComplexHelpEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="IsTimedEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="IsDebugEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="IsVerboseEnabled", t:="System.Boolean") #>
+<# Add_Field(n:="FileOutputs", t:="System.IO.FileStream()") #>
+<# Add_Field(n:="EmailOutputs", t:="System.String()") #>
+<# Add_Field(n:="HtmlEmailOutputs", t:="System.String()") #>
+<# Add_Field(n:="Iterations", t:="System.Int32", f:="1") #>
+<# Add_Field(n:="Outputs", t:="System.Collections.Generic.List(Of Leviathan.Commands.ICommandsOutput)", f:="NEW") #>
+<# Add_Field(n:="Performance", t:="CommandPerformance", f:="NEW") #>
+<# Add_Field(n:="Command", t:="CommandInterrogatedClass", f:="Leviathan.Commands.CommandInterrogatedClass.InterrogateClass(Me.GetType)") #>
+<# Add_Field(n:="ArgParser", t:="CommandArgumentsParser", f:="NEW") #>
+<# Add_Field(n:="StringParser", t:="FromString", f:="NEW", i:="ICommandsExecution.StringParser") #>
+<# Add_Field(n:="Progress", t:="System.Collections.HashTable", f:="NEW") #>
+<# Add_Field(n:="MailLog", t:="System.IO.DirectoryInfo") #>
+<# Add_Field(n:="MailSuppress", t:="System.Boolean") #>
+<# Add_Field(n:="MailServer", t:="System.String") #>
+<# Add_Field(n:="MailServerPort", t:="System.Int32", f:="25") #>
+<# Add_Field(n:="MailServerSSL", t:="System.Boolean") #>
+<# Add_Field(n:="MailServerDomain", t:="System.String") #>
+<# Add_Field(n:="MailServerUsername", t:="System.String") #>
+<# Add_Field(n:="MailServerPassword", t:="System.String") #>
+<# Add_Field(n:="MailFromAddress", t:="System.String") #>
+<# Add_Field(n:="MailFromDisplay", t:="System.String") #>
+<# Add_Field(n:="MailReplyToAddress", t:="System.String") #>
+<# Add_Field(n:="MailReplyToDisplay", t:="System.String") #>
+<# Add_Field(n:="MailWidth", t:="System.Int32", f:="150") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

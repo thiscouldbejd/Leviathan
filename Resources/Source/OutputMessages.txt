@@ -1,0 +1,157 @@
+; General Messages
+
+messageCommandSucceeded = Command ({0}) Succeeded.
+messageCommandFailed = Command ({0}) Failed.
+
+; Exception Messages
+
+errorCommandAborted = Command ({0}) Aborted.
+errorCommandAmbiguous = Supplied Command ({0}) was ambiguous, please select command from the list.
+errorCommandGeneral = Command ({0}) Errored: {1}
+errorCommandDebug = Error Stack Trace: Level {0}
+errorCommandNoDefault = No default Command found.
+errorCommandUnknown = Supplied Command ({0}) was not found.
+errorCommandHelpTypeInterrogation = Interrogation of Type {0} Failed.
+errorFlagAmbiguous = Supplied Flag ({0}) was ambiguous, please select flag from the list.
+errorMemberNotFound = Supplied Member ({0}) was not found.
+errorParsingStringArgumentFailed = Parsing of String Argument ("{0}") to Type ({1}) Failed.
+
+; Execution Messages
+
+executionRun = Command: {0} | Ran: {1}
+executionDebugPreParseArgs = Arguments Passed to Command Execution Provider.
+executionDebugPostParseArgs = Arguments Passed to Command Method: {0}
+
+; Performance Messages
+
+performanceColumnTitle = PERFORMANCE
+performanceColumnWorkDone = Command
+performanceColumnTook = Took
+performanceColumnMemWorkingSet = Memory Usage
+performanceColumnOrder = Execution Order
+performanceColumnCount = Count
+performanceColumnMin = Minimum
+performanceColumnMax = Maximum
+performanceColumnAverage = Average
+performanceWorkHelp = Generated Help
+
+; Wpf Mode
+
+promptWpfMode = >
+titleWpfMode = JLI Host
+ouputTitleWpfMode = JLI Output
+exitWpfMode = exit
+clearWpfMode = cls
+characterWidthWpfMode = Output Is {0} Characters Wide 
+statusWaitingWpfMode = Ready
+statusWorkingSingularWpfMode = Running Command ...
+statusWorkingMultipleWpfMode = Running {0} Commands ...
+statusPendingWpfMode = Awaiting Input ...
+commandWpfLastRun = Last Seen: {0} {1}
+settingsWpfSuggestions = Suggest [F1]
+settingsWpfCache = Cache: {0} Item
+settingsWpfCaches = Cache: {0} Items
+settingsWpfCacheListNull = {0}: NULL
+settingsWpfCacheListValue = {0}: {1}
+
+; Question Messages
+
+questionSectionTitle = Question
+
+; Titles
+
+titleDebug = DEBUG
+titleLog = LOG
+titleError = ERROR
+titleInformation = INFORMATION
+titlePerformance = PERFORMANCE
+titleQuestion = QUESTION
+titleSuccess = SUCCESS
+titleWarning = WARNING
+
+; Interactive Messages
+
+promptInteractiveQuestion = {0} [y/n]
+promptInteractiveAffirmative = y
+promptInteractiveNegative = n
+promptInteractiveChangeConfirmation = Are these changes correct?
+promptInteractiveListSelection = Which row in the list would you like to use?
+
+; Object Messages
+
+questionSelectToFewObjects = There are only {0} objects to select from, would you like to select all of them?
+questionListSelection = Which row in the list would you like to select?
+
+; Help Messages
+
+helpColumnTitle = Title
+helpColumnCommand = Command Name
+helpColumnFlags = Flags
+helpColumnParameters = Parameters
+helpColumnDescription = Description
+helpColumnProperty = Property
+helpColumnType = Type
+helpColumnDetails = Details
+helpColumnArgs = Args
+helpColumnDeclaredIn = Declared In
+helpColumnEnumName = Enum Value Name
+helpColumnEnumValue = Enum Value
+helpRowTitle = Title
+helpRowVersion = Version
+helpRowCopyright = Copyright
+helpRowDescription = Description
+helpRowProduct = Product
+helpRowClr = Compiled Runtime
+helpRowKey = Key
+helpRowName = Name
+helpRowCommandDescription = Command (Class) Description
+helpRowMethodDescription = Method Description
+helpRowLoadingDuration = Loading Time
+helpRowLastLoad = Command Loaded/Reloaded
+helpFlagReadable = Readable
+helpFlagWritable = Writable
+helpFlagSimple = Simple
+helpFlagArray = Array
+helpFlagCollection = Collection
+helpFlagList = List
+helpEntryAssembly = Entry Assembly
+helpCommandAssembly = Command Assembly
+helpTypeAssembly = Type Assembly
+helpTitleCommandDetails = Command Details
+helpTitleCommandFurtherDetails = Further Details
+helpTitleCommandFlagDetails = Flag Details
+helpTitleTypeDetails = Type Details
+helpTitleEnumDetails = Enum Details
+helpTitleReturnType = Command Return Type
+helpKeyTitle = Keyboard Shortcuts
+helpKeyF1 = F1
+helpKeyF2 = F2
+helpKeyF3 = F3
+helpKeyF4 = F4
+helpKeyF5 = F5
+helpKeyF6 = F6
+helpKeyF7 = F7
+helpKeyF8 = F8
+helpKeyF1Description = Toggles Contextual Command Suggestions (Input Only)
+helpKeyF2Description = Reloads Command Assemblies (Input Only)
+helpKeyF3Description = Aligns Window to Left Side of Screen
+helpKeyF4Description = Resizes Window to Content Width
+helpKeyF5Description = Aligns Window to Right Side of Screen
+helpKeyF6Description = Locks Window to Location and Opacity
+helpKeyF7Description = Forces Window to Top
+helpKeyF8Description = Toggles Opacity On/Off (Input influcenes Output)
+
+; Cryptography Messages
+
+cryptographyCommandResults = Cryptography Command Results
+cryptographyCipherText = Cipher Text
+cryptographyPlainText = Plain Text
+cryptographyHashText = Hash Text
+
+; Text Transform Messages
+templatingTransformSucceeded = Transformed the Input File: '{0}' to the Output File: '{1}'
+
+; Command Loading Messages
+commandLoadingAnalysing = Loading Assembly for Analyis: {0}
+commandLoadingIgnore = Ignoring Assembly: {0}
+commandLoadingFailed = Failed to Load Assembly: {0}

@@ -1,0 +1,6 @@
+﻿<# Add_Class(a:="Commands") #>
+<# Add_Behaviour(n:="ThreadSafeUpdates", p:="Pr_ThreadSafes:Value;ParsedValue;Position") #>
+<# Add_Field(n:="Value", t:="System.String", a:="R") #>
+<# Add_Field(n:="ParsedValue", t:="System.String()", a:="R") #>
+<# Add_Field(n:="Position", t:="System.Int32", a:="R") #>
+<#@ include file="%TEMPLATES_PATH%\Classes\VB_Object.tt" #>

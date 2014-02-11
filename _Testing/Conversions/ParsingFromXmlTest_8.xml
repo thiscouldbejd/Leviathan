@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Leviathan.Testing.TestParsedObject2>
+  
+  <AField1>30/12/2006 11:00:01</AField1>
+  
+  <AField2>
+
+    <!-- Comment 1 -->
+    <!-- Comment 2 -->
+    <Leviathan.Testing.TestParsedObject3>
+      <AField1>1</AField1>
+      <AField2>Test1</AField2>
+      <AProperty1>2</AProperty1>
+      <AProperty2>Test2</AProperty2>
+    </Leviathan.Testing.TestParsedObject3>
+    
+  </AField2>
+  
+  <AField3>Leviathan.Testing.TestParsedObject</AField3>
+  
+</Leviathan.Testing.TestParsedObject2>
