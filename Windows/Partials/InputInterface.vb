@@ -231,7 +231,7 @@ Partial Public Class InputInterface
 
 				ElseIf e.Key = Key.F2 Then
 
-					AssemblyEntry.Load()
+					AssemblyEntry.Load() ' Need to pass Commnad Output here ideally.
 					e.Handled = True
 
 				ElseIf e.Key = Key.F3 Then

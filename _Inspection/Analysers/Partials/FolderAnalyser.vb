@@ -6,6 +6,12 @@ Namespace Inspection
 
 	Partial Public Class FolderAnalyser
 
+		#Region " Private Variables "
+
+			Private throw_Exceptions As Boolean = False
+
+		#End Region
+
 		#Region " Public Constants "
 
 			''' <summary>
@@ -54,7 +60,7 @@ Namespace Inspection
 
 						If Not m_AssemblyFilePaths_HASVALUE Then
 
-							m_AssemblyFilePaths = AnalysePath(Folder, Host)
+							m_AssemblyFilePaths = AnalysePath(Folder, Host, throw_Exceptions)
 							m_AssemblyFilePaths_HASVALUE = True
 
 						End If
@@ -89,6 +95,9 @@ Namespace Inspection
 							If Not [assembly] Is Nothing Then memberArrayList.AddRange([assembly].GetTypes)
 
 						Catch ex As System.Exception
+
+							If throw_Exceptions Then Throw ex
+
 						End Try
 
 					Next
@@ -139,7 +148,8 @@ Namespace Inspection
 			''' <remarks></remarks>
 			Public Shared Function VerifyAssemblyFile( _
 				ByVal assemblyFile As IO.FileInfo, _
-				Optional ByVal host As Leviathan.Commands.ICommandsExecution = Nothing _
+				Optional ByVal host As Leviathan.Commands.ICommandsExecution = Nothing, _
+				Optional ByVal throw_Exceptions As Boolean = False _
 			) As Boolean
 
 				Try
@@ -172,7 +182,8 @@ Namespace Inspection
 						If host.Available(VL.Standard) Then _
 							host.Warn(ex.ToString)
 					End If
-					Return False
+
+					If throw_Exceptions Then Throw ex Else Return False
 
 				Catch ex As System.Exception
 
@@ -183,7 +194,7 @@ Namespace Inspection
 							host.Warn(ex.ToString)
 					End If
 
-					Return False
+					If throw_Exceptions Then Throw ex Else Return False
 
 				End Try
 
@@ -191,7 +202,8 @@ Namespace Inspection
 
 			Public Shared Function AnalysePath( _
 				ByVal folder As IO.DirectoryInfo, _
-				Optional ByVal host As Leviathan.Commands.ICommandsExecution = Nothing _
+				Optional ByVal host As Leviathan.Commands.ICommandsExecution = Nothing, _
+				Optional ByVal throw_Exceptions As Boolean = False _
 			) As IO.FileInfo()
 
 				If Not folder.Exists Then Throw New ArgumentException()
@@ -205,7 +217,7 @@ Namespace Inspection
 
 					If i <= fileList.Count - 1 Then
 
-						If Not VerifyAssemblyFile(fileList(i), host) Then
+						If Not VerifyAssemblyFile(fileList(i), host, throw_Exceptions) Then
 
 							fileList.RemoveAt(i)
 							i -= 1
