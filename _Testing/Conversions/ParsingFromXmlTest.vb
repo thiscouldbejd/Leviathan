@@ -187,7 +187,7 @@ Namespace Testing
 	<TestFixture()> _
 	Public Class ParsingFromXmlTest
 
-		Private CONST BASE_PATH As String = "C:\Users\jd\Documents\Dropbox\Development\Leviathan\_Testing\Conversions\"
+		Private CONST BASE_PATH As String = "..\..\_Testing\Conversions\"
 
 		<Test()> Public Sub CheckParsing1()
 

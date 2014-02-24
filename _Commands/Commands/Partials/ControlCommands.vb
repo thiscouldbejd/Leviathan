@@ -596,6 +596,31 @@ Namespace Commands
 
 			End Sub
 
+			<Command( _
+				ResourceContainingType:=GetType(ControlCommands), _
+				ResourceName:="CommandDetails", _
+				Name:="environmental-variables", _
+				Description:="@commandControlDescriptionEnvironmentalVariables@" _
+			)> _
+			Public Function ProcessCommandVariable( _
+				<Configurable( _
+					ResourceContainingType:=GetType(ControlCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandControlParameterVariableName@" _
+				)> _
+				ByVal variable_Name As String _
+			) As IFixedWidthWriteable
+
+				Dim variable_Rows As New List(Of Row)
+
+				variable_Rows.Add(New Row().Add(variable_Name).Add(System.Environment.GetEnvironmentVariable(variable_Name, EnvironmentVariableTarget.Machine)).Add("Machine"))
+				variable_Rows.Add(New Row().Add(variable_Name).Add(System.Environment.GetEnvironmentVariable(variable_Name, EnvironmentVariableTarget.Process)).Add("Process"))
+				variable_Rows.Add(New Row().Add(variable_Name).Add(System.Environment.GetEnvironmentVariable(variable_Name, EnvironmentVariableTarget.User)).Add("User"))
+				
+				Return 	Cube.Create(InformationType.Information, "Environmental Variables Summary", "Name", "Value", "Type").Add(New Slice(variable_Rows))
+				
+			End Function
+
 		#End Region
 
 	End Class

@@ -42,6 +42,8 @@ commandControlDescriptionConditionalExists = Execute Command if Source Exists
 commandControlDescriptionIterate = Execute Command in Iterative Loop
 commandControlDescriptionIterateAggregate = Execute Command in Iterative Loop (With Aggregated Results)
 commandControlDescriptionInterval = Execute Command in Timer Control Loop
+commandControlDescriptionCommandReload = Reload All Commands
+commandControlDescriptionEnvironmentalVariables = Elucidate Environmental Variable
 
 commandControlDescriptionAppend = Appends an Object/s (to an ex into the Command Storage Area (e.g 
 commandControlDescriptionPut = Puts an Object(s) into the Command Storage Area
@@ -57,6 +59,7 @@ commandControlParameterDescriptionExecutionCommand = Command to be Executed
 commandControlParameterDescriptionIntervalSpan = Interval Timespan
 commandControlParameterDescriptionIntervalRepetitions = Maximum Repetitions of the Interval to Execute
 commandControlParameterOutputFile = Output File
+commandControlParameterVariableName = Variable Name
 
 ; Cryptography Commands
 ; ---------------------

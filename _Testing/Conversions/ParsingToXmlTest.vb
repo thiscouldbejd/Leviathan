@@ -62,7 +62,8 @@ Namespace Testing
 	<TestFixture()> _
 	Public Class ParsingToXmlTest
 
-		Private CONST BASE_PATH As String = "C:\Users\jd\Documents\Dropbox\Development\Leviathan\_Testing\Conversions\"
+		Private CONST BASE_PATH As String = "..\..\_Testing\Conversions\"
+		
 		<Test()> Public Sub CheckParsing1()
 
 			Dim l_fileStream As New IO.FileStream(BASE_PATH & "ParsingFromXmlTest_1.xml", IO.FileMode.Open)

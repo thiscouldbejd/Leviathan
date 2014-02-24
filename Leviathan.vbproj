@@ -760,7 +760,7 @@
     <NUnit WorkingDirectory="$(MSBuildProjectDirectory)" Assemblies="$(TargetDir)$(TargetFileName)" ContinueOnError="false" OutputXmlFile="$(TargetDir)$(TargetName)-results.xml" ToolPath="$(NUnitToolPath)" DisableShadowCopy="true" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>$(SolutionDir)\Generate-Resources.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent>
+    <PreBuildEvent>$(SolutionDir)Generate-Resources.bat $(ProjectDir)Resources\Source $(ProjectDir)Resources\Compiled en-GB</PreBuildEvent>
     <PostBuildEvent>IF NOT EXIST "$(TargetDir)Commands\" (
             mkdir $(TargetDir)Commands
         )
