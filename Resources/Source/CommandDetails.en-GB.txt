@@ -157,6 +157,7 @@ commandFormatterParameterDescriptionProperties = <property names[index](display 
 commandFormatterParameterDescriptionRepresentation = <representation type>
 commandFormatterParameterDescriptionRounding = <number of places to round to>
 commandFormatterParameterDescriptionOutputFile = Output CSV File
+commandFormatterParameterDescriptionReturnIfEmpty = Return Empty Formatted Display if Empty Source Data
 
 ; Sorted Command Descriptions
 ; ---------------------------

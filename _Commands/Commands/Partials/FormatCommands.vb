@@ -668,7 +668,49 @@ Namespace Commands
 				ByVal title As String _
 			) As IFixedWidthWriteable
 
+				Return ProcessCommandStandard(value, title, False)
+
+			End Function
+
+			''' <summary>
+			''' Method to Output a specified <see cref="Object"/> in a Grid Representation.
+			''' </summary>
+			''' <param name="value">The Object to output,
+			''' this can be a type, single object, IList, ICollection or Array.</param>
+			''' <param name="title">The title of the Formatted Output</param>
+			''' <returns>The Formatted Output.</returns>
+			''' <remarks></remarks>
+			<Command( _
+				ResourceContainingType:=GetType(FormatCommands), _
+				ResourceName:="CommandDetails", _
+				Name:="standard", _
+				Description:="@commandFormatterStandardDescription@" _
+			)> _
+			Public Function ProcessCommandStandard( _
+				<Configurable( _
+					ResourceContainingType:=GetType(FormatCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandFormatterParameterDescriptionObjects@" _
+				)> _
+				ByVal value As Object, _
+				<Configurable( _
+					ResourceContainingType:=GetType(FormatCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandFormatterParameterDescriptionTitle@" _
+				)> _
+				ByVal title As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(FormatCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandFormatterParameterDescriptionReturnIfEmpty@" _
+				)> _
+				ByVal return_If_Empty As Boolean _
+			) As IFixedWidthWriteable
+
 				If Not value Is Nothing Then
+
+					' Handle Empty Generic List Typing
+					Dim element_Type As System.Type = TypeAnalyser.GetInstance(value.GetType()).GetElementType()
 
 					' Ensure we can handle the value as an Array
 					value = CreateArray(value)
@@ -677,7 +719,7 @@ Namespace Commands
 					SortValues(Host, FieldsToSortAscending, FieldsToSortDescending, value)
 
 					' Get the properties that we're going to output
-					Dim properties As FormatterProperty() = GetOutputProperties(TypeAnalyser.GetInstance(GetElementType(value)))
+					Dim properties As FormatterProperty() = GetOutputProperties(TypeAnalyser.GetInstance(element_Type))
 
 					Dim formatted_Rows As New List(Of Row)
 
@@ -689,7 +731,7 @@ Namespace Commands
 					Next
 
 					' Return if we have rows.
-					If Not formatted_Rows.Count = 0 Then Return Cube.Create(InformationType.Information, _
+					If Not formatted_Rows.Count = 0 OrElse return_If_Empty Then Return Cube.Create(InformationType.Information, _
 					title, New List(Of FormatterProperty)(properties)).Add(New Slice(formatted_Rows))
 
 				End If

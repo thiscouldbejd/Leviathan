@@ -334,7 +334,7 @@ Namespace Commands
 					If Not show_Properties Is Nothing AndAlso show_Properties.Length > 0 Then _
 						formatter.FieldsToOverride = FormatterProperty.Create(show_Properties).ToArray()
 
-					Dim output As Cube = formatter.ProcessCommandStandard(values)
+					Dim output As Cube = formatter.ProcessCommandStandard(values, "Choose From List", True)
 
 					output.Columns.Insert(0, New FormatterProperty(String.Empty))
 
