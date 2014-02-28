@@ -709,17 +709,22 @@ Namespace Commands
 
 				If Not value Is Nothing Then
 
+					Dim analyser As TypeAnalyser = Nothing
+
 					' Handle Empty Generic List Typing
-					Dim element_Type As System.Type = TypeAnalyser.GetInstance(value.GetType()).GetElementType()
+					If return_If_Empty Then analyser = TypeAnalyser.GetInstance( _
+						TypeAnalyser.GetInstance(value.GetType).GetElementType())
 
 					' Ensure we can handle the value as an Array
 					value = CreateArray(value)
+
+					If analyser Is Nothing Then analyser = TypeAnalyser.GetInstance(GetElementType(value))
 
 					' Perform a standard sort on the Array
 					SortValues(Host, FieldsToSortAscending, FieldsToSortDescending, value)
 
 					' Get the properties that we're going to output
-					Dim properties As FormatterProperty() = GetOutputProperties(TypeAnalyser.GetInstance(element_Type))
+					Dim properties As FormatterProperty() = GetOutputProperties(analyser)
 
 					Dim formatted_Rows As New List(Of Row)
 
