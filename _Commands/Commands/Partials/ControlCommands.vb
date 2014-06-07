@@ -1,6 +1,7 @@
 Imports Leviathan.Caching
 Imports Leviathan.Visualisation
 Imports IT = Leviathan.Visualisation.InformationType
+Imports System.Diagnostics
 
 Namespace Commands
 
@@ -620,6 +621,137 @@ Namespace Commands
 				Return 	Cube.Create(InformationType.Information, "Environmental Variables Summary", "Name", "Value", "Type").Add(New Slice(variable_Rows))
 				
 			End Function
+
+			<Command( _
+				ResourceContainingType:=GetType(ControlCommands), _
+				ResourceName:="CommandDetails", _
+				Name:="cmd-execute", _
+				Description:="@commandControlDescriptionCommandLineEecutable@" _
+			)> _
+			Public Function ProcessCommandCommandLineEecutable( _
+				<Configurable( _
+					ResourceContainingType:=GetType(ControlCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandControlParameterExecutableName@" _
+				)> _
+				ByVal executable_Name As String _
+			) As Boolean
+
+				Return ProcessCommandCommandLineEecutable(executable_Name, String.Empty)
+
+			End Function
+
+			<Command( _
+				ResourceContainingType:=GetType(ControlCommands), _
+				ResourceName:="CommandDetails", _
+				Name:="cmd-execute", _
+				Description:="@commandControlDescriptionCommandLineEecutable@" _
+			)> _
+			Public Function ProcessCommandCommandLineEecutable( _
+				<Configurable( _
+					ResourceContainingType:=GetType(ControlCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandControlParameterExecutableName@" _
+				)> _
+				ByVal executable_Name As String, _
+				<Configurable( _
+					ResourceContainingType:=GetType(ControlCommands), _
+					ResourceName:="CommandDetails", _
+					Description:="@commandControlParameterCommandLineParameters@" _
+				)> _
+				ByVal command_Parameters As String _
+			) As Boolean
+
+				Dim cmd_Exe As String = "c:\windows\system32\cmd.exe"
+
+				If Not System.IO.File.Exists(executable_Name) Then
+
+					Return False
+
+				Else
+
+					Dim ps As New ProcessStartInfo
+					ps.FileName = cmd_Exe
+					ps.RedirectStandardInput = True
+					ps.RedirectStandardOutput = True
+					ps.RedirectStandardError = True
+					
+					ps.UseShellExecute = False
+					ps.CreateNoWindow = True
+
+					Dim p As New Process
+					p.StartInfo = ps
+
+					AddHandler p.ErrorDataReceived, AddressOf cmd_Error
+					AddHandler p.OutputDataReceived, AddressOf cmd_DataReceived 
+					p.EnableRaisingEvents = True
+
+					p.Start()
+					p.BeginOutputReadLine()
+					p.BeginErrorReadLine()
+
+					If String.IsNullOrEmpty(command_Parameters) Then
+						p.StandardInput.WriteLine(executable_Name)
+					Else
+						p.StandardInput.WriteLine(executable_Name & " " & command_Parameters)
+					End If
+
+					p.StandardInput.WriteLine("exit")
+
+					'Dim output_Err As String = p.StandardError.ReadToEnd()
+					'Dim output_Std As String = p.StandardOutput.ReadToEnd()
+					
+					p.WaitForExit()
+
+					Dim err_Level As Integer = p.ExitCode
+
+					If err_Level <> 0 Then
+
+						Host.[Warn]("Error: " & err_Level)
+						'If Not String.IsNullOrEmpty(output_Err) Then Host.Warn(output_Err)
+						Return False
+
+					Else
+
+						'If Not String.IsNullOrEmpty(output_Err) Then
+
+						''	Host.Warn(output_Err)
+						
+						'ElseIf Not String.IsNullOrEmpty(output_Std) Then
+
+						''	Host.Success(output_Std)
+
+						'End If
+
+						Return True
+
+					End If
+
+				End If
+
+			End Function
+
+		#End Region
+
+		#Region " Private Command Line Event Handling Procedures "
+
+			Private Sub cmd_DataReceived( _
+				ByVal sender As Object, _
+				ByVal e As DataReceivedEventArgs _
+			)
+
+				If Not e.Data Is Nothing Then Host.Success(e.Data)
+
+			End Sub
+
+			Private Sub cmd_Error( _
+				ByVal sender As Object, _
+				ByVal e As DataReceivedEventArgs _
+			)
+
+				If Not e.Data Is Nothing Then Host.Warn(e.Data)
+				
+			End Sub
 
 		#End Region
 

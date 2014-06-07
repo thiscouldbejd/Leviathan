@@ -44,6 +44,7 @@ commandControlDescriptionIterateAggregate = Execute Command in Iterative Loop (W
 commandControlDescriptionInterval = Execute Command in Timer Control Loop
 commandControlDescriptionCommandReload = Reload All Commands
 commandControlDescriptionEnvironmentalVariables = Elucidate Environmental Variable
+commandControlDescriptionCommandLineEecutable = Execute Command Line Application
 
 commandControlDescriptionAppend = Appends an Object/s (to an ex into the Command Storage Area (e.g 
 commandControlDescriptionPut = Puts an Object(s) into the Command Storage Area
@@ -60,6 +61,8 @@ commandControlParameterDescriptionIntervalSpan = Interval Timespan
 commandControlParameterDescriptionIntervalRepetitions = Maximum Repetitions of the Interval to Execute
 commandControlParameterOutputFile = Output File
 commandControlParameterVariableName = Variable Name
+commandControlParameterExecutableName = Executable Path and Name
+commandControlParameterCommandLineParameters = Executable Parameters
 
 ; Cryptography Commands
 ; ---------------------
