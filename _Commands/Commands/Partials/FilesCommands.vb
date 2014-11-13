@@ -716,7 +716,9 @@ Namespace Commands
 						For i As Integer = 0 To value.Columns.Count - 1
 
 							If i > 0 Then output_Writer.Write(COMMA)
-							output_Writer.Write(StringCommands.ObjectToSingleString(value.Columns(i).DisplayName, " | "))
+							Dim column_Value As String = StringCommands.ObjectToSingleString(value.Columns(i).DisplayName, " | ")
+							If column_Value.IndexOf(COMMA) >= 0 Then column_Value = QUOTE_DOUBLE & column_Value & QUOTE_DOUBLE
+							output_Writer.Write(column_Value)
 
 						Next
 
@@ -731,7 +733,9 @@ Namespace Commands
 								For j As Integer = 0 To value_Slice.Rows(i).Cells.Count - 1
 
 									If j > 0 Then output_Writer.Write(COMMA)
-									output_Writer.Write(StringCommands.ObjectToSingleString(value_Slice.Rows(i)(j), "; "))
+									Dim cell_Value As String = StringCommands.ObjectToSingleString(value_Slice.Rows(i)(j), "; ")
+									If cell_Value.IndexOf(COMMA) >= 0 Then cell_Value = QUOTE_DOUBLE & cell_Value & QUOTE_DOUBLE
+									output_Writer.Write(cell_Value)
 
 								Next
 
@@ -742,6 +746,8 @@ Namespace Commands
 							If Not Host Is Nothing AndAlso Host.Available(VerbosityLevel.Interactive) Then Host.Progress(i + 1 / rowCount, "Outputting Table Rows")
 
 						Next
+
+						output_Writer.Flush()
 
 					End If
 

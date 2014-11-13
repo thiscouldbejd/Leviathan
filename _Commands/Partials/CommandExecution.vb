@@ -647,7 +647,37 @@ Namespace Commands
 
 				For i As Integer = 0 To Outputs.Count - 1
 
-					Outputs(i).Show_Outputs(values)
+					Try
+
+						Outputs(i).Show_Outputs(values)
+
+					Catch ex As Exception
+
+						Env_Error_External(String.Format(ERROR_COMMAND_GENERAL, command.ToString(), TypeAnalyser.ExceptionToString(ex)))
+
+						If Env_Available(VL.Debug) Then
+
+							Dim level As Integer = 1
+
+							Do Until ex Is Nothing
+
+								If Not String.IsNullOrEmpty(ex.StackTrace) Then
+
+									Dim stackTrace As New List(Of String)(ex.StackTrace.Split(Environment.NewLine))
+									stackTrace.Insert(0, String.Format(ERROR_COMMAND_DEBUG, level))
+									Env_Debug_External(stackTrace.ToArray)
+
+								End If
+
+								ex = ex.InnerException
+
+								level += 1
+
+							Loop
+
+						End If
+						
+					End Try
 
 				Next
 
@@ -760,8 +790,38 @@ Namespace Commands
 				' -- Close All Outputs --
 				For i As Integer = 0 To Outputs.Count - 1
 
-					Outputs(i).Close()
+					Try
 
+						Outputs(i).Close()
+
+					Catch ex As Exception
+
+						Env_Error_External(String.Format(ERROR_COMMAND_GENERAL, command.ToString(), TypeAnalyser.ExceptionToString(ex)))
+
+						If Env_Available(VL.Debug) Then
+
+							Dim level As Integer = 1
+
+							Do Until ex Is Nothing
+
+								If Not String.IsNullOrEmpty(ex.StackTrace) Then
+
+									Dim stackTrace As New List(Of String)(ex.StackTrace.Split(Environment.NewLine))
+									stackTrace.Insert(0, String.Format(ERROR_COMMAND_DEBUG, level))
+									Env_Debug_External(stackTrace.ToArray)
+
+								End If
+
+								ex = ex.InnerException
+
+								level += 1
+
+							Loop
+
+						End If
+
+					End Try
+					
 				Next
 				' -----------------------
 

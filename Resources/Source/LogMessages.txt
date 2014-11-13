@@ -57,13 +57,3 @@ queryParserTranslatedProperties = Translated Property From: {0} To: {1} Using: {
 queryParserParameters = Parameters: {0}
 queryParserOrdering = Orderings: {0}
 queryParserJoinings = Joins: {0}
-
-; Leviathan.Directories
-directoryCreatedProfileDirBase = CreatedProfileDirBase
-directoryCreatedHomeDirBase = CreatedHomeDirBase
-directoryAccountUsername = AccountUsername
-directoryAccountPassword = AccountPassword
-directoryAccountPasswordPhonetic = AccountPasswordPhonetic
-directoryCreatedAccount = CreatedAccount
-directoryAddedToGroups = AddedToGroups
-directorySetHomeDirSecurity = SetHomeDirSecurity

@@ -75,6 +75,12 @@ Public Module AssemblyEntry
 
 				Dim finished As Boolean = New InputInterface().ShowDialog()
 
+			ElseIf Not args Is Nothing AndAlso args.Length = 1 AndAlso args(0).ToLower = "/opaque" Then
+
+				Dim _input As New InputInterface()
+				_input.Opacity_Locked = True
+				Dim finished As Boolean = _input.ShowDialog()
+
 			Else
 
 				Dim executor As New CommandExecution(args)

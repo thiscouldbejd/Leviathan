@@ -127,10 +127,12 @@ Namespace Commands
 					If Not String.IsNullOrEmpty(FromAddress) Then
 						_from = Hermes.Email.Manager.CreateAddress(FromAddress, FromDisplay)
 					Else
-						_from = Hermes.Email.Manager.CreateAddress(Cipher.Create_Password(12, 0).ToLower() & Default_From_Domain, "Leviathan")
+						_from = Hermes.Email.Manager.CreateAddress(Cipher.Create_Password(12, 0).ToLower() & _
+							Default_From_Domain, "Leviathan")
 					End If
 					Dim _replyTo As System.Net.Mail.MailAddress = Nothing
-					If Not String.IsNullOrEmpty(ReplyToAddress) Then _replyTo = Hermes.Email.Manager.CreateAddress(ReplyToAddress, ReplyToDisplay)
+					If Not String.IsNullOrEmpty(ReplyToAddress) Then _replyTo = _
+						Hermes.Email.Manager.CreateAddress(ReplyToAddress, ReplyToDisplay)
 
 					' -- Set Up the Hermes Manager and Send Email --
 					Dim _manager = new Hermes.Email.Manager()
