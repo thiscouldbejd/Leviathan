@@ -700,12 +700,14 @@ Namespace Commands
 				If Not FileOutputs Is Nothing AndAlso FileOutputs.Length > 0 Then Outputs.Add(New CommandFileOutput(FileOutputs))
 
 				If Not EmailOutputs Is Nothing AndAlso EmailOutputs.Length > 0 Then Outputs.Add(New CommandEmailOutput(MailLog, MailSuppress, _
-					MailServer, MailServerPort, MailServerSSL, MailServerDomain, MailServerUsername, MailServerPassword, MailFromAddress, MailFromDisplay, _
-					MailReplyToAddress, MailReplyToDisplay, EmailOutputs, String.Format(EXECUTION_RUN, ArrayToSingleString(Args, SPACE), DateTime.Now.ToString("s"))))
+					MailServer, MailServerPort, MailServerSSL, MailServerDomain, MailServerUsername, MailServerPassword, MailServerValidateCertificate, _
+					MailFromAddress, MailFromDisplay, MailReplyToAddress, MailReplyToDisplay, EmailOutputs, _
+					String.Format(EXECUTION_RUN, ArrayToSingleString(Args, SPACE), DateTime.Now.ToString("s"))))
 
 				If Not HtmlEmailOutputs Is Nothing AndAlso HtmlEmailOutputs.Length > 0 Then Outputs.Add(New CommandEmailOutput(MailLog, MailSuppress, _
-					MailServer, MailServerPort, MailServerSSL, MailServerDomain, MailServerUsername, MailServerPassword, MailFromAddress, MailFromDisplay, _
-					MailReplyToAddress, MailReplyToDisplay, HtmlEmailOutputs, String.Format(EXECUTION_RUN, ArrayToSingleString(Args, SPACE), DateTime.Now.ToString("s")), True, MailWidth))
+					MailServer, MailServerPort, MailServerSSL, MailServerDomain, MailServerUsername, MailServerPassword, MailServerValidateCertificate, _
+					MailFromAddress, MailFromDisplay, MailReplyToAddress, MailReplyToDisplay, HtmlEmailOutputs, _
+					String.Format(EXECUTION_RUN, ArrayToSingleString(Args, SPACE), DateTime.Now.ToString("s")), True, MailWidth))
 				' -------------------------------------------
 
 				If IsSimpleHelpEnabled OrElse IsComplexHelpEnabled Then

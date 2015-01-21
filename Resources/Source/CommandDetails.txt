@@ -25,6 +25,7 @@ commandDescriptionMailReplyToDisplay = Mail Display Sent Reply To
 commandDescriptionMailLogging = Mail Logging Directory
 commandDescriptionMailSuppress = Suppress Mail Sending
 commandDescriptionMailWidth = Number of Characters Width for Mail Displays
+commandDescriptionMailServerValidateCertificate = Validate Mail Server Certificate (if using SSL)
 commandParameterDescriptionTimedIterations = <number of iterations to execute>
 commandParameterDescriptionFileStreams = <file name/s or path/s>
 commandParameterDescriptionHostEntry = <fqdn or ip address>

@@ -143,6 +143,7 @@ Namespace Commands
 					_manager.SMTP_Server = Hermes.Email.Manager.CreateServer(Server)
 					_manager.SMTP_Port = ServerPort
 					_manager.Use_SSL = ServerSSL
+					_manager.Verify_SSL = ServerValidateCertificate
 					If String.IsNullOrEmpty(ServerUsername) Then
 						_manager.SMTP_Credential = Hermes.Email.Manager.CreateIntegratedCredential()
 					Else

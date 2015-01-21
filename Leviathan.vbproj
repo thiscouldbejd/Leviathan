@@ -24,7 +24,9 @@
     <!-- Note: If MSBuild.Community.Tasks is not installed on Build Machine -->
     <!-- Set the MSBuildCommunityTasksPath Property in MSBuild.Community.Tasks.Targets (Packages) to '.' e.g. -->
     <!-- <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath> -->
-    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.65\tools</MSBuildTasksPath>
+    <!-- <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.88\tools</MSBuildTasksPath> -->
+    <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">.</MSBuildCommunityTasksPath>
+    <MSBuildTasksPath>Packages\MSBuildTasks.1.4.0.88\tools</MSBuildTasksPath>
     <NUnitToolPath>Packages\NUnit.Runners.2.6.2\tools</NUnitToolPath>
     <DelaySign>False</DelaySign>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
@@ -91,7 +93,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hermes">
-      <HintPath>Packages\Hermes.1.0.5220.19823\lib\net40\Hermes.dll</HintPath>
+      <HintPath>Packages\Hermes.1.0.5499.25648\lib\net40\Hermes.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -120,11 +125,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <Reference Include="nunit.framework">
-      <HintPath>Packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="_Calculated\Generated\Bounded.vb">

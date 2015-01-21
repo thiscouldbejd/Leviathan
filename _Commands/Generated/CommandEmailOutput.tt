@@ -7,6 +7,7 @@
 <# Add_Field(n:="ServerDomain", t:="System.String") #>
 <# Add_Field(n:="ServerUsername", t:="System.String") #>
 <# Add_Field(n:="ServerPassword", t:="System.String") #>
+<# Add_Field(n:="ServerValidateCertificate", t:="System.Boolean", f:="###True") #>
 <# Add_Field(n:="FromAddress", t:="System.String") #>
 <# Add_Field(n:="FromDisplay", t:="System.String") #>
 <# Add_Field(n:="ReplyToAddress", t:="System.String") #>
